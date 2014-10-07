@@ -1,0 +1,23 @@
+|L1_Q6_statemachine
+H_next <> inst5
+G_next <> inst4
+LEDG7 <> G
+SW0 => inst2.IN1
+SW0 => inst3.IN1
+SW0 => inst6.IN0
+SW0 => inst9.IN0
+SW0 => inst10.IN0
+SW1 => inst8.IN0
+SW1 => inst7.IN0
+SW1 => inst9.IN1
+SW1 => inst10.IN1
+LEDR[0] <> G1
+LEDG8 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+SW17 => G.ACLR
+SW17 => inst17.IN0
+SW17 => inst14.IN0
+SW17 => G1.PRESET
+KEY[0] => G.CLK
+KEY[0] => G1.CLK
+
+

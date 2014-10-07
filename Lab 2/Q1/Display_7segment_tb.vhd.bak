@@ -1,0 +1,28 @@
+Library ieee;
+use ieee.std_logic_1164.ALL;
+
+ENTITY Display_7segment_tb IS
+END Display_7segment_tb;
+
+ARCHITECTURE test_bench OF Display_7segment_tb IS
+	COMPONENT DE2_115_TOP
+		PORT (
+			 -- Buttons and switches
+			 SW  : IN std_logic_vector(17 downto 0);        -- DPDT switches
+
+			 -- LED displays
+			 HEX0 : OUT std_logic_vector(6 downto 0)       -- 7-segment display (active low)    
+			 );
+	 END COMPONENT;
+	 
+	 SIGNAL clk   :	STD_LOGIC := '0';
+	 SIGNAL SW_tb :	STD_LOGIC_VECTOR(17 DOWNTO 0) := (OTHERS => '0');
+	 SIGNAL HEX0  :	STD_LOGIC_VECTOR(6 DOWNTO 0)  := (OTHERS => '0');
+	 
+	 BEGIN
+	 
+		clk_process : PROCESS
+		BEGIN
+			
+			
+				

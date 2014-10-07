@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+--
+-- File name				: Display_7segment.vhd
+-- Title						: Display_7segment
+-- Description				: 
+--								: <use multiple lines if necessary>
+--								: 
+-- Design library			: <does the design require a special compilation directory?>
+-- Analysis Dependency	: <does this file require another design unit for compilation?>
+-- Initialization			: <does this file require any initialization?>
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.0c
+-- Notes						: <Include any additional notes>
+--								: <use multiple lines if necessary>
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date			Author				Revision		Comments
+--		1/17/2012	<your name>			Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
+

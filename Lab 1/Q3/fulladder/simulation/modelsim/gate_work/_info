@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\HW1\Q3\fulladder\simulation\modelsim
+Efulladder
+Z1 w1410534832
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 Pha:T]_MmzTJCYhSbeLPQ1
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 mVG;b;]=zAIVfAk:WJ`El1
+Z8 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\HW1\Q3\fulladder\simulation\modelsim
+Z9 8fulladder_7_1200mv_85c_slow.vho
+Z10 Ffulladder_7_1200mv_85c_slow.vho
+l0
+L34
+VPkY:W:DIzdU<GIi3ZUnG53
+!s100 Hj08f@73cMKk>Yhz:WaNl2
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1410535907.562000
+Z13 !s90 -reportprogress|300|-93|-work|work|fulladder_7_1200mv_85c_slow.vho|
+Z14 !s107 fulladder_7_1200mv_85c_slow.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 fulladder 0 22 PkY:W:DIzdU<GIi3ZUnG53
+l69
+L49
+VTFUeC@CnF:8`^9YFLMiHc1
+!s100 h81z=i:FK63J3@2DlDYFO2
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16

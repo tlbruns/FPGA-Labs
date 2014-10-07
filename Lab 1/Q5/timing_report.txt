@@ -1,0 +1,7 @@
+Minimum pulse width for:
+
+Slow 1200mV 85C Model = 
+
+Slow 1200mV 0C Model =
+
+Fast 1200 mV 0C Model = 

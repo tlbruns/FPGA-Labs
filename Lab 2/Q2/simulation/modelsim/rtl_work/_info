@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\Labs\Lab 2\Q2\simulation\modelsim
+Ede2_115_top
+Z1 w1412292004
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\Labs\Lab 2\Q2\simulation\modelsim
+Z6 8C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/resources/DE2_115_TOP.vhd
+Z7 FC:/Users/Trevor/Documents/School/EECE 277 (FPGA)/resources/DE2_115_TOP.vhd
+l0
+L15
+V2zL;6RkBGEMR]NPVcnU4l1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1412294695.211000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/resources/DE2_115_TOP.vhd|
+Z11 !s107 C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/resources/DE2_115_TOP.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 XhDGRMimdePL1L[NAb9`70
+!i10b 1
+Astructure
+R2
+R3
+R4
+DEx4 work 11 de2_115_top 0 22 2zL;6RkBGEMR]NPVcnU4l1
+l117
+L102
+VKJonPZ0P=AEgokk1YfK[>0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 N^_e1cG>XTAQ521eYlKka3
+!i10b 1
+Eserial_adder_fsm
+Z14 w1412292871
+R3
+R4
+R5
+Z15 8C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd
+Z16 FC:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd
+l0
+L4
+VlEn7ADT<m7inX5^?fXRJL3
+!s100 `^MUVJhTEF5na3DKdM;jR1
+R8
+31
+!i10b 1
+Z17 !s108 1412294695.332000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd|
+Z19 !s107 C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd|
+R12
+R13
+Abehavior
+R3
+R4
+DEx4 work 16 serial_adder_fsm 0 22 lEn7ADT<m7inX5^?fXRJL3
+l19
+L15
+V9oJQQ6Qa9C`11FTb6?M3C0
+!s100 [^Yc<^UMHFG^:Tml>Y2cb0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

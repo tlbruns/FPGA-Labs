@@ -1,0 +1,92 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do fulladder_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {fulladder_7_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity fulladder
+# -- Compiling architecture structure of fulladder
+# 
+do {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/HW1/Q4/Q4_fulladder.do}
+# vsim -voptargs=+acc -t ns work.fulladder 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.fulladder(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+do {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/HW1/Q4/Q4_fulladder_timing.do}
+# vsim +altera -do fulladder_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp {/=C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/HW1/Q4/fulladder/simulation/modelsim/fulladder_vhd.sdo} -t ns work.fulladder 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.fulladder(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# usage: sdfcom [ options ] source-file output-file
+# 
+# Options:
+# 
+#   -mindelays          Use minimum timing from min:typ:max expressions
+# 
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+# 
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+# 
+#   -delayscale <val>   Scale delays by the specified value
+# 
+#   -nocompress         Don't compress the resulting output file
+# 
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# 
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ns  Iteration: 0  Instance: /fulladder File: fulladder_7_1200mv_85c_slow.vho
+# do fulladder_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {fulladder_7_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity fulladder
+# -- Compiling architecture structure of fulladder
+# 

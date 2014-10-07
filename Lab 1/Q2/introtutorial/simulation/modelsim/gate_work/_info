@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\HW1\Q2\introtutorial\simulation\modelsim
+vlight
+!i10b 1
+!s100 WhXYYbV9i1?`Bod3^UOIF2
+IHnMOh0=_5E2Y@S=zYH@LT3
+VRGbd@<HKZNBBDkkJf=E?l0
+Z1 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\HW1\Q2\introtutorial\simulation\modelsim
+w1410536476
+8light_7_1200mv_85c_slow.vo
+Flight_7_1200mv_85c_slow.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1410536491.892000
+!s107 light_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|light_7_1200mv_85c_slow.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

@@ -1,0 +1,89 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do DE2_115_TOP_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/resources/DE2_115_TOP.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DE2_115_TOP
+# -- Compiling architecture structure of DE2_115_TOP
+# vcom -93 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_adder_FSM
+# -- Compiling architecture behavior of serial_adder_FSM
+# 
+vsim work.serial_adder_fsm
+# vsim work.serial_adder_fsm 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.serial_adder_fsm(behavior)
+add wave -position insertpoint  \
+sim:/serial_adder_fsm/clk \
+sim:/serial_adder_fsm/a \
+sim:/serial_adder_fsm/b \
+sim:/serial_adder_fsm/reset \
+sim:/serial_adder_fsm/s \
+sim:/serial_adder_fsm/state \
+sim:/serial_adder_fsm/state_present \
+sim:/serial_adder_fsm/state_next \
+sim:/serial_adder_fsm/s_next
+force -freeze sim:/serial_adder_fsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/serial_adder_fsm/a 1 0, 0 {116 ps} -r 233
+force -freeze sim:/serial_adder_fsm/b 1 0, 0 {233 ps} -r 466
+force -freeze sim:/serial_adder_fsm/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.de2_115_top
+# vsim work.de2_115_top 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.de2_115_top(structure)
+# Loading work.serial_adder_fsm(behavior)
+add wave -position insertpoint  \
+sim:/de2_115_top/KEY(3)
+add wave -position insertpoint  \
+sim:/de2_115_top/SW(17)
+add wave -position insertpoint  \
+sim:/de2_115_top/SW(1)
+add wave -position insertpoint  \
+sim:/de2_115_top/SW(0)
+add wave -position insertpoint  \
+sim:/de2_115_top/LEDG(7)
+add wave -position insertpoint  \
+sim:/de2_115_top/LEDG(0)
+add wave -position insertpoint  \
+sim:/de2_115_top/LEDR(0)
+force -freeze sim:/de2_115_top/KEY(3) 1 0, 0 {50 ps} -r 100
+force -freeze sim:/de2_115_top/SW(1) 1 0, 0 {116 ps} -r 233
+force -freeze sim:/de2_115_top/SW(0) 1 0, 0 {233 ps} -r 466
+force -freeze sim:/de2_115_top/SW(17) 0 0
+run
+run
+run
+run
+run
+run
