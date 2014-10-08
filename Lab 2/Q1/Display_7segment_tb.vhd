@@ -27,71 +27,119 @@ ARCHITECTURE test_bench OF Display_7segment_tb IS
 			HEX0 => HEX0);
 		
 		-- Generate test stimulus
-		stim_process : PROCESS()
+		stim_process : PROCESS
 		BEGIN
-			WAIT FOR 10ns;
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0000";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "1000000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0001";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "1111001")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0010";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0100100")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0011";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0110000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0100";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0011001")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0101";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0010010")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0110";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0000010")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "0111";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "1111000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "1000";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0000000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "1001";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0010000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
-			WAIT FOR 10ns;
+				
+			WAIT FOR 10 ns;
 			SW_tb(3 DOWNTO 0) <= "1010";
+			WAIT FOR 1 ns;
 			ASSERT (HEX0 = "0001000")
 				REPORT "Incorrect HEX display"
 				SEVERITY NOTE;
 			
-			
-			
-			
-					
-					"0000011"	WHEN "1011",	-- B
-					"1000110"	WHEN "1100",	-- C
-					"0100001"	WHEN "1101",	-- D
-					"0000110"	WHEN "1110",	-- E
-					"0001110"	WHEN "1111",	-- F
+			WAIT FOR 10 ns;
+			SW_tb(3 DOWNTO 0) <= "1011";
+			WAIT FOR 1 ns;
+			ASSERT (HEX0 = "0000011")
+				REPORT "Incorrect HEX display"
+				SEVERITY NOTE;
 				
+			WAIT FOR 10 ns;
+			SW_tb(3 DOWNTO 0) <= "1100";
+			WAIT FOR 1 ns;
+			ASSERT (HEX0 = "1000110")
+				REPORT "Incorrect HEX display"
+				SEVERITY NOTE;
+				
+			WAIT FOR 10 ns;
+			SW_tb(3 DOWNTO 0) <= "1101";
+			WAIT FOR 1 ns;
+			ASSERT (HEX0 = "0100001")
+				REPORT "Incorrect HEX display"
+				SEVERITY NOTE;
+			
+			WAIT FOR 10 ns;
+			SW_tb(3 DOWNTO 0) <= "1110";
+			WAIT FOR 1 ns;
+			ASSERT (HEX0 = "0000110")
+				REPORT "Incorrect HEX display"
+				SEVERITY NOTE;
+			
+			WAIT FOR 10 ns;
+			SW_tb(3 DOWNTO 0) <= "1111";
+			WAIT FOR 1 ns;
+			ASSERT (HEX0 = "0001110")
+				REPORT "Incorrect HEX display"
+				SEVERITY NOTE;
+			
+		END PROCESS;
+END test_bench;

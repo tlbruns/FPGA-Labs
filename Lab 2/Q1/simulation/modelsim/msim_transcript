@@ -1,0 +1,109 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do DE2_115_TOP_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DE2_115_TOP
+# -- Compiling architecture structure of DE2_115_TOP
+# vcom -93 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Display_7segment
+# -- Compiling architecture behavioral of Display_7segment
+# 
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DE2_115_TOP
+# -- Compiling architecture structure of DE2_115_TOP
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Debounce.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Debounce
+# -- Compiling architecture Behavioral of Debounce
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Display_7segment
+# -- Compiling architecture behavioral of Display_7segment
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Display_7segment_tb
+# -- Compiling architecture test_bench of Display_7segment_tb
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(86): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(92): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(98): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(104): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(110): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(116): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd(122): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DE2_115_TOP
+# -- Compiling architecture structure of DE2_115_TOP
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Debounce.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Debounce
+# -- Compiling architecture Behavioral of Debounce
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Display_7segment
+# -- Compiling architecture behavioral of Display_7segment
+vcom -reportprogress 300 -work work {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Display_7segment_tb
+# -- Compiling architecture test_bench of Display_7segment_tb
+vsim -voptargs=+acc work.display_7segment_tb(test_bench)
+# vsim -voptargs=+acc work.display_7segment_tb(test_bench) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.display_7segment_tb(test_bench)
+# Loading work.de2_115_top(structure)
+# Loading work.display_7segment(behavioral)
+add wave -position end  sim:/display_7segment_tb/HEX0(0)
+add wave -position end  sim:/display_7segment_tb/SW_tb(3)
+add wave -position end  sim:/display_7segment_tb/SW_tb(2)
+add wave -position end  sim:/display_7segment_tb/SW_tb(1)
+add wave -position end  sim:/display_7segment_tb/SW_tb(0)
+# Can't move the Now cursor.
+add wave -position end  sim:/display_7segment_tb/HEX0
+run
+run
+run
+run

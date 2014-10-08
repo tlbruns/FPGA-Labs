@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Ede2_115_top
+Z0 w1412613348
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Trevor\Documents\School\EECE 277 (FPGA)\FPGA-Labs\Lab 2\Q1\ModelSim_testbench
+Z4 8C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd
+Z5 FC:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd
+l0
+L14
+VeHDiFTcbC]ToHIj4J`W1U0
+!s100 3FG=TK[46ZMK5U2gAZC;Q1
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1412803432.473000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd|
+Z9 !s107 C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+Astructure
+R1
+R2
+Z12 DEx4 work 11 de2_115_top 0 22 eHDiFTcbC]ToHIj4J`W1U0
+l37
+L26
+Z13 VC27I0dH40hoQ;T2o9JLZ72
+Z14 !s100 719@^a?M?kA9nI;<>_YkY1
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11
+Edisplay_7segment
+Z15 w1412634897
+R1
+R2
+R3
+Z16 8C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd
+Z17 FC:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd
+l0
+L4
+VZJnHkVG?4zhB^Wcz2l?Um0
+R6
+32
+Z18 !s108 1412803432.312000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd|
+Z20 !s107 C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd|
+R10
+R11
+!s100 aoYkDfKmiVl?N1LfT=zjV1
+!i10b 1
+Abehavioral
+R1
+R2
+DEx4 work 16 display_7segment 0 22 ZJnHkVG?4zhB^Wcz2l?Um0
+l11
+L10
+VcOGFeCE1b[jCfFg=cFGNd2
+!s100 0N1e:^ia:mPcn<ZO?33PT3
+R6
+32
+R18
+R19
+R20
+R10
+R11
+!i10b 1
+Edisplay_7segment_tb
+Z21 w1412803425
+R1
+R2
+R3
+Z22 8C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd
+Z23 FC:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd
+l0
+L4
+Vj6eiJF:IeAQ`XzK2Z=d5^1
+R6
+32
+Z24 !s108 1412803432.149000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd|
+Z26 !s107 C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd|
+R10
+R11
+!s100 Z:DKkRmYD8SH23dVWOA_b0
+!i10b 1
+Atest_bench
+R1
+R2
+DEx4 work 19 display_7segment_tb 0 22 j6eiJF:IeAQ`XzK2Z=d5^1
+l22
+L7
+V07ozVmD@ZLEInHa@TE<nL2
+R6
+32
+R24
+R25
+R26
+R10
+R11
+!s100 4C53ei=_z4XNI0DYXm;bF2
+!i10b 1

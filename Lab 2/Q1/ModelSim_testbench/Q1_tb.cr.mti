@@ -1,0 +1,49 @@
+{{C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DE2_115_TOP
+-- Compiling architecture structure of DE2_115_TOP
+
+} {} {}} {{C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Display_7segment
+-- Compiling architecture behavioral of Display_7segment
+
+} {} {}} {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/DE2_115_TOP.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DE2_115_TOP
+-- Compiling architecture structure of DE2_115_TOP
+
+} {} {}} {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Display_7segment
+-- Compiling architecture behavioral of Display_7segment
+
+} {} {}} {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Display_7segment_tb
+-- Compiling architecture test_bench of Display_7segment_tb
+
+} {} {}} {{C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd}} {1 {vcom -work work -2002 -explicit {C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q1/Display_7segment_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Display_7segment_tb
+-- Compiling architecture test_bench of Display_7segment_tb
+
+} {} {}}
