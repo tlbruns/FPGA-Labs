@@ -1,3 +1,25 @@
+-------------------------------------------------------------------------------
+--
+-- Project name			: Reg_n
+-- File name				: Reg_n.vhd
+-- Title						: generic n-bit register
+-- Description				: adaptable register that can be specified to
+--								: store any number of bits
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: Set number of bits using the n value in 'generic'
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 

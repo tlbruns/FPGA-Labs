@@ -1,12 +1,25 @@
+-------------------------------------------------------------------------------
 --
--- DE2-115 top-level module (entity declaration)
+-- Project name			: ticker_tape
+-- File name				: DE2_115_TOP.vhd
+-- Title						: DE2_115_TOP
+-- Description				: Top-level entity to display a scrolling 'Hello'
+--								: message using the 7-segment displays on the DE2-115 
+--								: evaluation board
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: include Debounce.vhd, Reg_n.vhd, and mux_2n.vhd
 --
--- William H. Robinson, Vanderbilt University University
---   william.h.robinson@vanderbilt.edu
+-------------------------------------------------------------------------------
 --
--- Updated from the DE2 top-level module created by 
--- Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
 --
+--			
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

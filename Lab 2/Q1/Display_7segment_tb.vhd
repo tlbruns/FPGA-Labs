@@ -1,3 +1,25 @@
+-------------------------------------------------------------------------------
+--
+-- Project name			: Display_7segment
+-- File name				: Display_7segment_tb.vhd
+-- Title						: Display_7segment test bench
+-- Description				: Test bench for verification of Display_7segment.vhd
+--								
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: Include DE2_115_TOP.vhd and Display_7segment.vhd
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
+
 Library ieee;
 use ieee.std_logic_1164.ALL;
 

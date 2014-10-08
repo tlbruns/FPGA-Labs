@@ -1,3 +1,25 @@
+-------------------------------------------------------------------------------
+--
+-- Project name			: Mux_2n
+-- File name				: mux_2n.vhd
+-- Title						: two-input mux entity
+-- Description				: outputs one of two inputs using a select input
+--								
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: 
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 

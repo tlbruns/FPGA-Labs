@@ -1,3 +1,25 @@
+-------------------------------------------------------------------------------
+--
+-- Project name			: Display_7segment
+-- File name				: Display_7segment.vhd
+-- Title						: Display_7segment
+-- Description				: Takes a 4-bit hex value as input and outputs the
+--								: corresponding character on a 7-segment display
+--								
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: testbench file is Display_7segment_tb.vhd
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.ALL;
 

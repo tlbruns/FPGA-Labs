@@ -1,12 +1,25 @@
+-------------------------------------------------------------------------------
 --
--- DE2-115 top-level module (entity declaration)
+-- Project name			: Display_7segment
+-- File name				: DE2_115_TOP.vhd
+-- Title						: Display_7segment
+-- Description				: Takes a 4-bit hex value as input and outputs the
+--								: corresponding character on a 7-segment display on
+--								: the DE2-115 evaluation board
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: testbench file is Display_7segment_tb.vhd
 --
--- William H. Robinson, Vanderbilt University University
---   william.h.robinson@vanderbilt.edu
+-------------------------------------------------------------------------------
 --
--- Updated from the DE2 top-level module created by 
--- Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
 --
+--			
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
