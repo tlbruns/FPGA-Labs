@@ -1,3 +1,21 @@
+-------------------------------------------------------------------------------
+--
+-- Project					:  Serial adder
+-- File name				:  Serial adder.vhd
+-- Title				    : Serial Adder Test Bench
+-- Description				: This module implements a serial adder with the DE2-115 
+-- 							  Test Bench file to simulate
+-- Design library			: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    : none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date		Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Brunst	Rev A			None
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -7,30 +25,22 @@ end serial_adder_tb;
 
 architecture tb of serial_adder_tb is
 
-  component counter32
-    port (
-      clk: in std_ulogic;
-      ena: in std_ulogic;
-      rst: in std_ulogic;
-      q  : out std_ulogic_vector(31 downto 0));
-  end component;
-  
-  component serial_adder_fsm is
+component serial_adder_FSM IS
    PORT(
-      clk  : IN  STD_LOGIC; -- KEY0
-      a    : IN  STD_LOGIC; -- SW16
-		b    : IN  STD_LOGIC; -- SW17
-      reset : IN   STD_LOGIC;  -- SW15
-		fsm_state: OUT STD_LOGIC;
-      s   : OUT  STD_LOGIC);
-END component;
-
+      clk   : IN   STD_LOGIC;
+      a	   : IN   STD_LOGIC;
+	  b	   : IN   STD_LOGIC;
+      reset	: IN   STD_LOGIC;
+      s		: OUT  STD_LOGIC;
+	  state : OUT	 STD_LOGIC
+		);
+end component;
   
   signal clk: std_logic := '0';
   signal a: std_logic := '0';
   signal b: std_logic := '0';
   signal reset: std_logic := '0';
-  signal fsm_state: std_logic; 
+  signal state: std_logic; 
   signal s  : std_logic;
   TYPE STATE_TYPE IS (G, H); 
 begin
@@ -40,7 +50,7 @@ begin
 	 a => a,
 	 b => b,
     reset => reset,
-	 fsm_state => fsm_state,
+	 state => state,
     s => s); 
     
 process
@@ -50,9 +60,7 @@ begin
     wait for 10 ps;
     clk <= not clk;
     wait for 10 ps;
-    -- clock period = 10 ns
   end loop;
-  wait;  -- simulation stops here
 end process;
 
 process
@@ -91,7 +99,7 @@ WAIT FOR 15 ps;
 ASSERT (s = '0') -- if false issues report string
 REPORT "Output incorrect at 15 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '0') -- if false issues report string
+ASSERT (state = '0') -- if false issues report string
 REPORT "State incorrect at 15 ps"
 SEVERITY NOTE;
 
@@ -99,7 +107,7 @@ WAIT FOR 30 ps;
 ASSERT (s = '1') -- if false issues report string
 REPORT "Output incorrect at 45 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '0') -- if false issues report string
+ASSERT (state = '0') -- if false issues report string
 REPORT "State incorrect at 45 ps"
 SEVERITY NOTE;
 
@@ -107,7 +115,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '1') -- if false issues report string
 REPORT "Output incorrect at 65 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '0') -- if false issues report string
+ASSERT (state = '0') -- if false issues report string
 REPORT "State incorrect at 65 ps"
 SEVERITY NOTE;
 
@@ -115,7 +123,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '0') -- if false issues report string
 REPORT "Output incorrect at 85 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '1') -- if false issues report string
+ASSERT (state = '1') -- if false issues report string
 REPORT "State incorrect at 85 ps"
 SEVERITY NOTE;
 
@@ -123,7 +131,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '1') -- if false issues report string
 REPORT "Output incorrect at 105 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '1') -- if false issues report string
+ASSERT (state = '1') -- if false issues report string
 REPORT "State incorrect at 105 ps"
 SEVERITY NOTE;
 
@@ -131,7 +139,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '0') -- if false issues report string
 REPORT "Output incorrect at 125 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '1') -- if false issues report string
+ASSERT (state = '1') -- if false issues report string
 REPORT "State incorrect at 125 ps"
 SEVERITY NOTE;
 
@@ -139,7 +147,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '0') -- if false issues report string
 REPORT "Output incorrect at 145 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '1') -- if false issues report string
+ASSERT (state = '1') -- if false issues report string
 REPORT "State incorrect at 145 ps"
 SEVERITY NOTE;
 
@@ -147,7 +155,7 @@ WAIT FOR 20 ps;
 ASSERT (s = '0') -- if false issues report string
 REPORT "Output incorrect at 165 ps"
 SEVERITY NOTE;
-ASSERT (fsm_state = '0') -- if false issues report string
+ASSERT (state = '0') -- if false issues report string
 REPORT "State incorrect at 165 ps"
 SEVERITY NOTE;
 

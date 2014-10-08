@@ -1,12 +1,20 @@
+-------------------------------------------------------------------------------
 --
--- DE2-115 top-level module (entity declaration)
---
--- William H. Robinson, Vanderbilt University University
---   william.h.robinson@vanderbilt.edu
---
--- Updated from the DE2 top-level module created by 
--- Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
---
+-- Project					: Serial Adder
+-- File name				: DE2_115_TOP.vhd
+-- Title					: Serial Adder 
+-- Description				: This module implements a serial adder with the DE2-115 
+-- 							: TOP LEVEL 
+-- Design library			: N/A
+-- Analysis Dependency		: none
+-- Simulator(s)				: ModelSim-Altera version 10.1d
+-- Initialization	   		: none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date		Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Brunst	Rev A			None
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;

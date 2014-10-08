@@ -1,3 +1,22 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: BCD Counter 
+-- File name				: BCD_3.vhd
+-- Title				    : BCD Counter
+-- Description				: This module implements a 3 digit BCD counter with the DE2-115 Board
+							-- This part counts each seconds
+
+-- Design library		: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    : none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date		Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Brunst	Rev A			None
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

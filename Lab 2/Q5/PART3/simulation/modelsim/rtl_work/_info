@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\MARCO\Altera Projects\Lab2\Problem5\PART3\simulation\modelsim
+Ede2_115_top
+Z1 w1412747281
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\MARCO\Altera Projects\Lab2\Problem5\PART3\simulation\modelsim
+Z8 8C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/DE2_115_TOP.vhd
+Z9 FC:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/DE2_115_TOP.vhd
+l0
+L16
+VmMlG:6YPRh8DW:bBzU9B81
+Z10 OV;C;10.1d;51
+31
+Z11 !s108 1412783444.148000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/DE2_115_TOP.vhd|
+Z13 !s107 C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/DE2_115_TOP.vhd|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 Y5@?Sh9:nRFORTZ>o[jeK3
+!i10b 1
+Astructural
+R2
+R3
+R4
+R5
+R6
+DEx4 work 11 de2_115_top 0 22 mMlG:6YPRh8DW:bBzU9B81
+l120
+L102
+VFHB6gjck2VdM5ig=`ROWe2
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 `63NY^RXWzLFZEdPM8RP21
+!i10b 1
+Eram_infer
+Z16 w1412742730
+R5
+R6
+R7
+Z17 8C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/ram_8_32.vhd
+Z18 FC:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/ram_8_32.vhd
+l0
+L5
+VKeKWC=EUWJUEW1^IiRC7H0
+!s100 CO<boHKbcd;2NAdbNH0YL2
+R10
+31
+!i10b 1
+Z19 !s108 1412783444.298000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/ram_8_32.vhd|
+Z21 !s107 C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/ram_8_32.vhd|
+R14
+R15
+Artl
+R5
+R6
+DEx4 work 9 ram_infer 0 22 KeKWC=EUWJUEW1^IiRC7H0
+l20
+L17
+VTba5bjlJ@F^m]M@Z:EVz]2
+!s100 SMUd20FLRcomSA@55k6<:3
+R10
+31
+!i10b 1
+R19
+R20
+R21
+R14
+R15

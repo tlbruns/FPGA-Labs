@@ -1,3 +1,21 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: Memory Part 1  
+-- File name				: ramlpm.vhd
+-- Title				   :  32 depth x 8 bits memopry
+-- Description			:  Test Bench
+-- Design library		: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    : none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date		Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Brunst	Rev A			None
+-------------------------------------------------------------------------------
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -36,7 +54,7 @@ begin
     
 process
 begin
-  for i in 1 to 20 loop
+  for i in 1 to 64 loop
     clock <= not clock;
     wait for 10 ps;
     clock <= not clock;
@@ -60,85 +78,17 @@ for i in 1 to 32 loop
  
  for i in 1 to 32 loop
    wait for 20 ps; 
-	 -- assert (q = data ) report ("Expected q = ") & 
-	-- integer'image(to_integer(unsigned(( data  ))  )) &  " but q = " & 
-	-- integer'image(to_integer(unsigned(( q  ))  )) severity ERROR;
+	  assert (q = data ) report ("Expected q = ") & 
+	 integer'image(to_integer(unsigned(( data  ))  )) &  " but q = " & 
+	 integer'image(to_integer(unsigned(( q  ))  )) severity ERROR;
 	 
 	address <= address + "00001";
-	--data <= data + "00000010";
+	data <= data + "00000010";
   end loop;
  
   
   
 end process;
 
-
---  
---PROCESS
---BEGIN
---WAIT FOR 15 ps;
---ASSERT (s = '0') -- if false issues report string
---REPORT "Output incorrect at 15 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '0') -- if false issues report string
---REPORT "State incorrect at 15 ps"
---SEVERITY NOTE;
---
---WAIT FOR 30 ps;
---ASSERT (s = '1') -- if false issues report string
---REPORT "Output incorrect at 45 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '0') -- if false issues report string
---REPORT "State incorrect at 45 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '1') -- if false issues report string
---REPORT "Output incorrect at 65 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '0') -- if false issues report string
---REPORT "State incorrect at 65 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '0') -- if false issues report string
---REPORT "Output incorrect at 85 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '1') -- if false issues report string
---REPORT "State incorrect at 85 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '1') -- if false issues report string
---REPORT "Output incorrect at 105 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '1') -- if false issues report string
---REPORT "State incorrect at 105 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '0') -- if false issues report string
---REPORT "Output incorrect at 125 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '1') -- if false issues report string
---REPORT "State incorrect at 125 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '0') -- if false issues report string
---REPORT "Output incorrect at 145 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '1') -- if false issues report string
---REPORT "State incorrect at 145 ps"
---SEVERITY NOTE;
---
---WAIT FOR 20 ps;
---ASSERT (s = '0') -- if false issues report string
---REPORT "Output incorrect at 165 ps"
---SEVERITY NOTE;
---ASSERT (fsm_state = '0') -- if false issues report string
---REPORT "State incorrect at 165 ps"
---SEVERITY NOTE;
-
---end process;
+end process;
 end tb;

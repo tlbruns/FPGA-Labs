@@ -1,3 +1,21 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: Serial Adder
+-- File name				:  Serial adder.vhd
+-- Title						: Serial Adder 
+-- Description				: This module implements a serial adder with the DE2-115
+
+-- Design library			: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    : none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date		Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Brunst	Rev A			None
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -8,8 +26,8 @@ ENTITY serial_adder_FSM IS
 		b	   : IN   STD_LOGIC;
       reset	: IN   STD_LOGIC;
       s		: OUT  STD_LOGIC;
-		state : OUT	 STD_LOGIC
-		);
+	  state : OUT	 STD_LOGIC
+	  );
 END serial_adder_FSM;
 
 ARCHITECTURE behavior OF serial_adder_FSM IS
