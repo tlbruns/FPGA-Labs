@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\MARCO\Altera Projects\Lab2\Problem5\PART1\simulation\modelsim
+Eramlpm
+Z1 w1412609490
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\MARCO\Altera Projects\Lab2\Problem5\PART1\simulation\modelsim
+Z5 8C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART1/ramlpm.vhd
+Z6 FC:/Users/MARCO/Altera Projects/Lab2/Problem5/PART1/ramlpm.vhd
+l0
+L42
+VK2RN@okbl@_WSC:Qh9^j63
+!s100 OW61YG8dCZ:CGA1FhdNL01
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1412696097.662000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART1/ramlpm.vhd|
+Z10 !s107 C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART1/ramlpm.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Asyn
+R2
+R3
+DEx4 work 6 ramlpm 0 22 K2RN@okbl@_WSC:Qh9^j63
+l87
+L54
+VAEEjYnlTmPF1dL1>Q4YeA3
+!s100 2;W^^Z]@^MM2g9diiPFa>0
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
