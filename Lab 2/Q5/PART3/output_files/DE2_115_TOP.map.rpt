@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_TOP
-Wed Oct 08 10:55:21 2014
+Wed Oct 08 18:52:27 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,12 +15,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. General Register Statistics
- 10. Registers Packed Into Inferred Megafunctions
- 11. Source assignments for ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0|altsyncram_kpg1:auto_generated
- 12. Parameter Settings for Inferred Entity Instance: ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Source assignments for ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0|altsyncram_kpg1:auto_generated
+ 13. Parameter Settings for Inferred Entity Instance: ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "Display_7segment:SSD5"
+ 16. Port Connectivity Checks: "Display_7segment:SSD3"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 08 10:55:21 2014           ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 08 18:52:27 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_TOP                                     ;
 ; Top-level Entity Name              ; DE2_115_TOP                                     ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 207                                             ;
+; Total logic elements               ; 132                                             ;
+;     Total combinational functions  ; 122                                             ;
+;     Dedicated logic registers      ; 44                                              ;
+; Total registers                    ; 44                                              ;
+; Total pins                         ; 106                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 256                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -161,54 +164,57 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; DE2_115_TOP.vhd                  ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/DE2_115_TOP.vhd        ;         ;
-; ram_8_32.vhd                     ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/ram_8_32.vhd           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_kpg1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/MARCO/Altera Projects/Lab2/Problem5/PART3/db/altsyncram_kpg1.tdf ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; Display_7segment.vhd             ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 2/Q5/PART3/Display_7segment.vhd   ;         ;
+; Debounce.vhd                     ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 2/Q5/PART3/Debounce.vhd           ;         ;
+; DE2_115_TOP.vhd                  ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 2/Q5/PART3/DE2_115_TOP.vhd        ;         ;
+; ram_8_32.vhd                     ; yes             ; User VHDL File               ; C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 2/Q5/PART3/ram_8_32.vhd           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_kpg1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 2/Q5/PART3/db/altsyncram_kpg1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-;                                             ;              ;
-; Total combinational functions               ; 0            ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 0            ;
-;     -- 3 input functions                    ; 0            ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 0            ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 207          ;
-; Total memory bits                           ; 256          ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; KEY[1]~input ;
-; Maximum fan-out                             ; 8            ;
-; Total fan-out                               ; 350          ;
-; Average fan-out                             ; 0.77         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 132            ;
+;                                             ;                ;
+; Total combinational functions               ; 122            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 53             ;
+;     -- 3 input functions                    ; 5              ;
+;     -- <=2 input functions                  ; 64             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 91             ;
+;     -- arithmetic mode                      ; 31             ;
+;                                             ;                ;
+; Total registers                             ; 44             ;
+;     -- Dedicated logic registers            ; 44             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 106            ;
+; Total memory bits                           ; 256            ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 44             ;
+; Total fan-out                               ; 719            ;
+; Average fan-out                             ; 1.86           ;
++---------------------------------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,7 +222,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
-; |DE2_115_TOP                              ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 207  ; 0            ; |DE2_115_TOP                                                                               ; work         ;
+; |DE2_115_TOP                              ; 122 (0)           ; 44 (0)       ; 256         ; 0            ; 0       ; 0         ; 106  ; 0            ; |DE2_115_TOP                                                                               ; work         ;
+;    |Debounce:B1|                          ; 80 (80)           ; 44 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Debounce:B1                                                                   ; work         ;
+;    |Display_7segment:SSD0|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD0                                                         ; work         ;
+;    |Display_7segment:SSD1|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD1                                                         ; work         ;
+;    |Display_7segment:SSD2|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD2                                                         ; work         ;
+;    |Display_7segment:SSD4|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD4                                                         ; work         ;
+;    |Display_7segment:SSD6|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD6                                                         ; work         ;
+;    |Display_7segment:SSD7|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD7                                                         ; work         ;
 ;    |ram_infer:ram8_32_1|                  ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|ram_infer:ram8_32_1                                                           ; work         ;
 ;       |altsyncram:ram_block_rtl_0|        ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0                                ; work         ;
 ;          |altsyncram_kpg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|ram_infer:ram8_32_1|altsyncram:ram_block_rtl_0|altsyncram_kpg1:auto_generated ; work         ;
@@ -238,14 +251,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 44    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Debounce:B1|SDC[31]                    ; 1       ;
+; Debounce:B1|SDC[0]                     ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -347,6 +371,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------------+
 
 
++---------------------------------------------------+
+; Port Connectivity Checks: "Display_7segment:SSD5" ;
++-----------+-------+----------+--------------------+
+; Port      ; Type  ; Severity ; Details            ;
++-----------+-------+----------+--------------------+
+; bcd[3..1] ; Input ; Info     ; Stuck at GND       ;
++-----------+-------+----------+--------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "Display_7segment:SSD3" ;
++-----------+-------+----------+--------------------+
+; Port      ; Type  ; Severity ; Details            ;
++-----------+-------+----------+--------------------+
+; bcd[3..1] ; Input ; Info     ; Stuck at GND       ;
++-----------+-------+----------+--------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -362,9 +404,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 08 10:55:16 2014
+    Info: Processing started: Wed Oct 08 18:52:22 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part_3 -c DE2_115_TOP
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file display_7segment.vhd
+    Info (12022): Found design unit 1: Display_7segment-behavioral
+    Info (12023): Found entity 1: Display_7segment
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: Debounce-Behavioral
+    Info (12023): Found entity 1: Debounce
 Info (12021): Found 2 design units, including 1 entities, in source file de2_115_top.vhd
     Info (12022): Found design unit 1: DE2_115_TOP-structural
     Info (12023): Found entity 1: DE2_115_TOP
@@ -372,41 +420,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram_8_3
     Info (12022): Found design unit 1: ram_infer-rtl
     Info (12023): Found entity 1: ram_infer
 Info (12127): Elaborating entity "DE2_115_TOP" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(24): used implicit default value for signal "SMA_CLKOUT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(33): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(34): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(35): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(36): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(37): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(38): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(39): used implicit default value for signal "HEX6" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(40): used implicit default value for signal "HEX7" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(42): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(46): used implicit default value for signal "UART_CTS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(49): used implicit default value for signal "UART_TXD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(53): used implicit default value for signal "LCD_BLON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(54): used implicit default value for signal "LCD_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(55): used implicit default value for signal "LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(56): used implicit default value for signal "LCD_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(57): used implicit default value for signal "LCD_RW" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(70): used implicit default value for signal "VGA_BLANK_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(71): used implicit default value for signal "VGA_CLK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(72): used implicit default value for signal "VGA_HS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(73): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(74): used implicit default value for signal "VGA_VS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(75): used implicit default value for signal "VGA_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(76): used implicit default value for signal "VGA_G" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(77): used implicit default value for signal "VGA_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(81): used implicit default value for signal "SRAM_ADDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(83): used implicit default value for signal "SRAM_CE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(84): used implicit default value for signal "SRAM_LB_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(85): used implicit default value for signal "SRAM_OE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(86): used implicit default value for signal "SRAM_UB_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(87): used implicit default value for signal "SRAM_WE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(94): used implicit default value for signal "AUD_DACDAT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(96): used implicit default value for signal "AUD_XCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10873): Using initial value X (don't care) for net "LEDG[8]" at DE2_115_TOP.vhd(41)
+Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(28): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(113): signal "data_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(114): signal "data_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(116): signal "write_address_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(117): signal "bcd_in0_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(118): signal "bcd_in0_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(121): signal "read_address_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(122): signal "bcd_in1_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(123): signal "bcd_in1_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(125): signal "q_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at DE2_115_TOP.vhd(126): signal "q_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10873): Using initial value X (don't care) for net "LEDG[8]" at DE2_115_TOP.vhd(27)
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:B1"
 Info (12128): Elaborating entity "ram_infer" for hierarchy "ram_infer:ram8_32_1"
+Info (12128): Elaborating entity "Display_7segment" for hierarchy "Display_7segment:SSD0"
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "ram_infer:ram8_32_1|ram_block_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -443,96 +471,7 @@ Info (12133): Instantiated megafunction "ram_infer:ram8_32_1|altsyncram:ram_bloc
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kpg1.tdf
     Info (12023): Found entity 1: altsyncram_kpg1
-Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "LCD_DATA[0]" has no driver
-    Warning (13040): Bidir "LCD_DATA[1]" has no driver
-    Warning (13040): Bidir "LCD_DATA[2]" has no driver
-    Warning (13040): Bidir "LCD_DATA[3]" has no driver
-    Warning (13040): Bidir "LCD_DATA[4]" has no driver
-    Warning (13040): Bidir "LCD_DATA[5]" has no driver
-    Warning (13040): Bidir "LCD_DATA[6]" has no driver
-    Warning (13040): Bidir "LCD_DATA[7]" has no driver
-    Warning (13040): Bidir "PS2_CLK" has no driver
-    Warning (13040): Bidir "PS2_DAT" has no driver
-    Warning (13040): Bidir "PS2_CLK2" has no driver
-    Warning (13040): Bidir "PS2_DAT2" has no driver
-    Warning (13040): Bidir "SRAM_DQ[0]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[1]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[2]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[3]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[4]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[5]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[6]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[7]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[8]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[9]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[10]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[11]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[12]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[13]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[14]" has no driver
-    Warning (13040): Bidir "SRAM_DQ[15]" has no driver
-    Warning (13040): Bidir "AUD_ADCLRCK" has no driver
-    Warning (13040): Bidir "AUD_BCLK" has no driver
-    Warning (13040): Bidir "AUD_DACLRCK" has no driver
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SMA_CLKOUT" is stuck at GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at GND
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND
-    Warning (13410): Pin "HEX2[2]" is stuck at GND
-    Warning (13410): Pin "HEX2[3]" is stuck at GND
-    Warning (13410): Pin "HEX2[4]" is stuck at GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at GND
-    Warning (13410): Pin "HEX3[0]" is stuck at GND
-    Warning (13410): Pin "HEX3[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[2]" is stuck at GND
-    Warning (13410): Pin "HEX3[3]" is stuck at GND
-    Warning (13410): Pin "HEX3[4]" is stuck at GND
-    Warning (13410): Pin "HEX3[5]" is stuck at GND
-    Warning (13410): Pin "HEX3[6]" is stuck at GND
-    Warning (13410): Pin "HEX4[0]" is stuck at GND
-    Warning (13410): Pin "HEX4[1]" is stuck at GND
-    Warning (13410): Pin "HEX4[2]" is stuck at GND
-    Warning (13410): Pin "HEX4[3]" is stuck at GND
-    Warning (13410): Pin "HEX4[4]" is stuck at GND
-    Warning (13410): Pin "HEX4[5]" is stuck at GND
-    Warning (13410): Pin "HEX4[6]" is stuck at GND
-    Warning (13410): Pin "HEX5[0]" is stuck at GND
-    Warning (13410): Pin "HEX5[1]" is stuck at GND
-    Warning (13410): Pin "HEX5[2]" is stuck at GND
-    Warning (13410): Pin "HEX5[3]" is stuck at GND
-    Warning (13410): Pin "HEX5[4]" is stuck at GND
-    Warning (13410): Pin "HEX5[5]" is stuck at GND
-    Warning (13410): Pin "HEX5[6]" is stuck at GND
-    Warning (13410): Pin "HEX6[0]" is stuck at GND
-    Warning (13410): Pin "HEX6[1]" is stuck at GND
-    Warning (13410): Pin "HEX6[2]" is stuck at GND
-    Warning (13410): Pin "HEX6[3]" is stuck at GND
-    Warning (13410): Pin "HEX6[4]" is stuck at GND
-    Warning (13410): Pin "HEX6[5]" is stuck at GND
-    Warning (13410): Pin "HEX6[6]" is stuck at GND
-    Warning (13410): Pin "HEX7[0]" is stuck at GND
-    Warning (13410): Pin "HEX7[1]" is stuck at GND
-    Warning (13410): Pin "HEX7[2]" is stuck at GND
-    Warning (13410): Pin "HEX7[3]" is stuck at GND
-    Warning (13410): Pin "HEX7[4]" is stuck at GND
-    Warning (13410): Pin "HEX7[5]" is stuck at GND
-    Warning (13410): Pin "HEX7[6]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND
@@ -552,90 +491,27 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[15]" is stuck at GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND
     Warning (13410): Pin "LEDR[17]" is stuck at GND
-    Warning (13410): Pin "UART_CTS" is stuck at GND
-    Warning (13410): Pin "UART_TXD" is stuck at GND
-    Warning (13410): Pin "LCD_BLON" is stuck at GND
-    Warning (13410): Pin "LCD_EN" is stuck at GND
-    Warning (13410): Pin "LCD_ON" is stuck at GND
-    Warning (13410): Pin "LCD_RS" is stuck at GND
-    Warning (13410): Pin "LCD_RW" is stuck at GND
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
-    Warning (13410): Pin "VGA_CLK" is stuck at GND
-    Warning (13410): Pin "VGA_HS" is stuck at GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
-    Warning (13410): Pin "VGA_VS" is stuck at GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND
-    Warning (13410): Pin "VGA_B[6]" is stuck at GND
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[0]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[1]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[2]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[3]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[4]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[5]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[6]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[7]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[8]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[9]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[10]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[11]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[12]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[13]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[14]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[18]" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND
-    Warning (13410): Pin "SRAM_CE_N" is stuck at GND
-    Warning (13410): Pin "SRAM_LB_N" is stuck at GND
-    Warning (13410): Pin "SRAM_OE_N" is stuck at GND
-    Warning (13410): Pin "SRAM_UB_N" is stuck at GND
-    Warning (13410): Pin "SRAM_WE_N" is stuck at GND
-    Warning (13410): Pin "AUD_DACDAT" is stuck at GND
-    Warning (13410): Pin "AUD_XCK" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50"
-    Warning (15610): No output dependent on input pin "CLOCK2_50"
-    Warning (15610): No output dependent on input pin "CLOCK3_50"
-    Warning (15610): No output dependent on input pin "SMA_CLKIN"
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "UART_RTS"
-    Warning (15610): No output dependent on input pin "UART_RXD"
-    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 215 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 29 input pins
-    Info (21059): Implemented 147 output pins
-    Info (21060): Implemented 31 bidirectional pins
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 83 output pins
+    Info (21061): Implemented 132 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 217 warnings
-    Info: Peak virtual memory: 504 megabytes
-    Info: Processing ended: Wed Oct 08 10:55:21 2014
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Wed Oct 08 18:52:27 2014
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

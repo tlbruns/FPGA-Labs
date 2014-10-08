@@ -14,20 +14,19 @@ use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
 entity DE2_115_TOP is
+
   port (
     -- Clocks
     
     CLOCK_50 	: in std_logic;                     -- 50 MHz
-    CLOCK2_50 	: in std_logic;                     -- 50 MHz
-    CLOCK3_50 	: in std_logic;                     -- 50 MHz
-    SMA_CLKIN  : in std_logic;                     -- External Clock Input
-    SMA_CLKOUT : out std_logic;                    -- External Clock Output
 
     -- Buttons and switches
     
     KEY : in std_logic_vector(3 downto 0);         -- Push buttons
     SW  : in std_logic_vector(17 downto 0);        -- DPDT switches
-
+	 LEDG : out std_logic_vector(8 downto 0);       -- Green LEDs (active high)
+    LEDR : out std_logic_vector(17 downto 0);      -- Red LEDs (active high)
+	 
     -- LED displays
 
     HEX0 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
@@ -37,64 +36,7 @@ entity DE2_115_TOP is
     HEX4 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
     HEX5 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
     HEX6 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
-    HEX7 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
-    LEDG : out std_logic_vector(8 downto 0);       -- Green LEDs (active high)
-    LEDR : out std_logic_vector(17 downto 0);      -- Red LEDs (active high)
-
-    -- RS-232 interface
-
-    UART_CTS : out std_logic;                      -- UART Clear to Send   
-    UART_RTS : in std_logic;                       -- UART Request to Send   
-    UART_RXD : in std_logic;                       -- UART Receiver
-    UART_TXD : out std_logic;                      -- UART Transmitter   
-
-    -- 16 X 2 LCD Module
-    
-    LCD_BLON : out std_logic;      							-- Back Light ON/OFF
-    LCD_EN   : out std_logic;      							-- Enable
-    LCD_ON   : out std_logic;      							-- Power ON/OFF
-    LCD_RS   : out std_logic;	   							-- Command/Data Select, 0 = Command, 1 = Data
-    LCD_RW   : out std_logic; 	   						-- Read/Write Select, 0 = Write, 1 = Read
-    LCD_DATA : inout std_logic_vector(7 downto 0); 	-- Data bus 8 bits
-
-    -- PS/2 ports
-
-    PS2_CLK : inout std_logic;     -- Clock
-    PS2_DAT : inout std_logic;     -- Data
-
-    PS2_CLK2 : inout std_logic;    -- Clock
-    PS2_DAT2 : inout std_logic;    -- Data
-
-    -- VGA output
-    
-    VGA_BLANK_N : out std_logic;            -- BLANK
-    VGA_CLK 	 : out std_logic;            -- Clock
-    VGA_HS 		 : out std_logic;            -- H_SYNC
-    VGA_SYNC_N  : out std_logic;            -- SYNC
-    VGA_VS 		 : out std_logic;            -- V_SYNC
-    VGA_R 		 : out unsigned(7 downto 0); -- Red[9:0]
-    VGA_G 		 : out unsigned(7 downto 0); -- Green[9:0]
-    VGA_B 		 : out unsigned(7 downto 0); -- Blue[9:0]
-
-    -- SRAM
-    
-    SRAM_ADDR : out unsigned(19 downto 0);         -- Address bus 20 Bits
-    SRAM_DQ   : inout unsigned(15 downto 0);       -- Data bus 16 Bits
-    SRAM_CE_N : out std_logic;                     -- Chip Enable
-    SRAM_LB_N : out std_logic;                     -- Low-byte Data Mask 
-    SRAM_OE_N : out std_logic;                     -- Output Enable
-    SRAM_UB_N : out std_logic;                     -- High-byte Data Mask 
-    SRAM_WE_N : out std_logic;                     -- Write Enable
-
-    -- Audio CODEC
-    
-    AUD_ADCDAT 	: in std_logic;               -- ADC Data
-    AUD_ADCLRCK 	: inout std_logic;            -- ADC LR Clock
-    AUD_BCLK 		: inout std_logic;            -- Bit-Stream Clock
-    AUD_DACDAT 	: out std_logic;              -- DAC Data
-    AUD_DACLRCK 	: inout std_logic;            -- DAC LR Clock
-    AUD_XCK 		: out std_logic               -- Chip Clock
-    
+    HEX7 : out std_logic_vector(6 downto 0)      -- 7-segment display (active low)
     );
   
 end DE2_115_TOP;
@@ -106,25 +48,86 @@ COMPONENT ram_infer IS
    (
       clock: IN   std_logic;
       data:  IN   std_logic_vector (7 DOWNTO 0);
-      write_address:  IN   integer RANGE 0 to 31;
-      read_address:   IN   integer RANGE 0 to 31;
+      write_address:  IN  INTEGER RANGE 0 TO 31;
+      read_address:   IN   INTEGER RANGE  0 TO 31;
       we:    IN   std_logic;
       q:     OUT  std_logic_vector (7 DOWNTO 0)
    );
 END COMPONENT;
 
-  signal q_int: std_logic_vector (7 DOWNTO 0);
-  signal write_address_int: integer RANGE 0 TO 31;
-  signal read_address_int: integer RANGE 0 TO 31;
+COMPONENT Debounce is
+  PORT
+  (
+	CLK 	: in STD_LOGIC;	-- 50 MHz input clock
+   x 		: in STD_LOGIC;	-- Push button input
+   DBx 	: out STD_LOGIC	-- Debounced push button
+  );
+END COMPONENT;
+
+COMPONENT Display_7segment IS
+	PORT( bcd	:	IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+			seven	:	OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+			);
+END COMPONENT;
+
+
+  signal data_int: std_logic_vector (7 DOWNTO 0);
+  --signal write_address_int: std_logic_vector (4 DOWNTO 0);
+  --signal read_address_int: std_logic_vector (4 DOWNTO 0);
+  signal write_address_int:   INTEGER RANGE 0 TO 31;
+  signal  read_address_int:   INTEGER RANGE  0 TO 31;
   signal we_int: std_logic;
+  signal q_int: std_logic_vector (7 DOWNTO 0);
+  
+  signal bcd_in0, bcd_in1, bcd_in2, bcd_in3, bcd_in4, bcd_in5, bcd_in6, bcd_in7 : std_logic_vector(3 downto 0);
+  signal bcd_in0_temp,  bcd_in1_temp : std_logic_vector(4 downto 0);
+  signal debounce_int0:std_logic;
+  signal debounce_int3:std_logic;
+  
+ 
   BEGIN
   
-  write_address_int <= to_integer(unsigned(SW(17 downto 13)));
-  read_address_int <= to_integer(unsigned(SW(12 downto 8)));
-
-  ram8_32_1 : ram_infer port map(KEY(0),SW(7 downto 0),write_address_int,read_address_int,KEY(1),LEDG(7 DOWNTO 0));
+  data_int <= SW(7 downto 0);
+  write_address_int  <= to_integer(unsigned(SW(12 downto 8)));
+  read_address_int  <= to_integer(unsigned(SW(17 downto 13)));
+  we_int <=  not KEY(3);
+  LEDG(7 downto 0) <= q_int;
   
-
-
-END structural;
+  B1 : Debounce PORT MAP (CLOCK_50,KEY(0),debounce_int0); 	
+ -- B2 : Debounce PORT MAP (CLOCK_50,KEY(3),debounce_int3);  
+  ram8_32_1 : ram_infer port map(debounce_int0,data_int,write_address_int,read_address_int,we_int,q_int);
+  
+  SSD0: Display_7segment PORT MAP (bcd_in0, HEX0);
+  SSD1: Display_7segment PORT MAP (bcd_in1, HEX1);
+  SSD2: Display_7segment PORT MAP (bcd_in2, HEX2);
+  SSD3: Display_7segment PORT MAP (bcd_in3, HEX3);
+  SSD4: Display_7segment PORT MAP (bcd_in4, HEX4);
+  SSD5: Display_7segment PORT MAP (bcd_in5, HEX5);
+  SSD6: Display_7segment PORT MAP (bcd_in6, HEX6);
+  SSD7: Display_7segment PORT MAP (bcd_in7, HEX7);
+  
+  PROCESS(debounce_int0)
+  BEGIN 
+  
+  
+  bcd_in0 <=  data_int(3 downto 0);
+  bcd_in1 <=  data_int(7 downto 4);
+  
+  bcd_in0_temp <=  std_logic_vector(to_unsigned(write_address_int,5));
+  bcd_in2 <= bcd_in0_temp(3 downto 0); 
+  bcd_in3 <= bcd_in0_temp(4 downto 1) srl 3;
+ 
+		
+  bcd_in1_temp <=  std_logic_vector(to_unsigned(read_address_int,5));
+  bcd_in4 <= bcd_in1_temp(3 downto 0); 
+  bcd_in5 <= bcd_in1_temp(4 downto 1) srl 3;
+  
+  bcd_in6 <=  q_int(3 downto 0);
+  bcd_in7 <=  q_int(7 downto 4);
+  
+  
+  
+			 
+  END PROCESS;
+  END structural;
 
