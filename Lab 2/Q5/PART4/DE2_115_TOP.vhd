@@ -95,56 +95,60 @@ end component;
 signal clk_reg:std_logic;
 signal rst_reg:std_logic;
 signal address_register: std_logic_vector(19 downto 0);
-signal data_register_low: std_logic_vector(7 downto 0);
+--signal data_register_low: std_logic_vector(7 downto 0);
 signal data_register: std_logic_vector(15 downto 0);
-signal wen_register: std_logic;
+signal data_int : std_logic_vector(15 downto 0);
+signal we_n_int: std_logic;
 signal bcd_in0, bcd_in1, bcd_in2, bcd_in3, bcd_in4, bcd_in5, bcd_in6, bcd_in7 : std_logic_vector(3 downto 0);
 
 BEGIN
 
-B0 : Debounce PORT MAP (CLOCK_50,KEY(0),clk_reg); 
---B1 : Debounce PORT MAP (CLOCK_50,KEY(1),rst_reg); 
+	B0 : Debounce PORT MAP (CLOCK_50,KEY(0),clk_reg); 
 
---R5_address: Reg_5 port map(clk_reg,rst_reg,SW(12 downto 8),address_register(4 downto 0));
---R8_data: Reg_8 port map(clk_reg,rst_reg,SW(7 downto 0),data_register_low(7 downto 0)); 
---R1_wen: Reg_1 port map(clk_reg,rst_reg, KEY(3),wen_register); 
-
-SSD0: Display_7segment PORT MAP (bcd_in0, HEX0);
-SSD1: Display_7segment PORT MAP (bcd_in1, HEX1);
-SSD2: Display_7segment PORT MAP (bcd_in2, HEX2);
-SSD3: Display_7segment PORT MAP (bcd_in3, HEX3);
-SSD4: Display_7segment PORT MAP (bcd_in4, HEX4);
-SSD5: Display_7segment PORT MAP (bcd_in5, HEX5);
-SSD6: Display_7segment PORT MAP (bcd_in6, HEX6);
-SSD7: Display_7segment PORT MAP (bcd_in7, HEX7);
+	SSD0: Display_7segment PORT MAP (bcd_in0, HEX0);
+	SSD1: Display_7segment PORT MAP (bcd_in1, HEX1);
+	SSD2: Display_7segment PORT MAP (bcd_in2, HEX2);
+	SSD3: Display_7segment PORT MAP (bcd_in3, HEX3);
+	SSD4: Display_7segment PORT MAP (bcd_in4, HEX4);
+	SSD5: Display_7segment PORT MAP (bcd_in5, HEX5);
+	SSD6: Display_7segment PORT MAP (bcd_in6, HEX6);
+	SSD7: Display_7segment PORT MAP (bcd_in7, HEX7);
 
    SRAM_CE_N <= '0';
    SRAM_OE_N <= '0';
    SRAM_UB_N <= '0';
    SRAM_LB_N <= '0';
 	
-  bcd_in0 <=  std_logic_vector(SRAM_DQ(3 downto 0));
-  bcd_in1 <=  std_logic_vector(SRAM_DQ(7 downto 4));
-  bcd_in2 <= data_register(3 downto 0); 
-  bcd_in3 <= data_register(7 downto 4);
-  bcd_in6 <= address_register(3 downto 0); 
-  bcd_in7 <= address_register(7 downto 4);
-  
-	SRAM_WE_N <= KEY(3);
-	SRAM_ADDR <= unsigned("000000000000000" & SW(12 downto 8));
-	data_register <= "00000000" & SW(7 downto 0);
+	we_n_int <= not SW(17);
+	LEDR(17) <= not we_n_int;
+	SRAM_WE_N <= we_n_int;
+	address_register <= "000000000000000" & SW(15 downto 11);
+	SRAM_ADDR <= unsigned(address_register);
+	data_int <= "00000000" & SW(7 downto 0);
+	
+   bcd_in0 <= std_logic_vector(SRAM_DQ(3 downto 0));
+   bcd_in1 <= std_logic_vector(SRAM_DQ(7 downto 4));
+   bcd_in4 <= data_int(3 downto 0); 
+   bcd_in5 <= data_int(7 downto 4);
+   bcd_in6 <= address_register(3 downto 0); 
+   bcd_in7 <= address_register(7 downto 4);
+	
+	
+	
 
-PROCESS(clk_reg,KEY(3),address_register)
+PROCESS(clk_reg,SW)
 BEGIN
-IF (clk_reg'event and clk_reg = '1') then 
+	
+	IF (clk_reg'event and clk_reg = '1') then 
+		data_register <= data_int;
+		
+		IF (we_n_int = '0') THEN 
+		data_register <= std_logic_vector(SRAM_DQ);
+		ELSE 
+		SRAM_DQ <=  unsigned(data_register);
+		END IF; 
 
-	IF (wen_register = '1') THEN 
-	data_register <= std_logic_vector(SRAM_DQ);
-	ELSE 
-	SRAM_DQ <=  unsigned(data_register);
 	END IF; 
-
-END IF; 
 END PROCESS;
 
 
