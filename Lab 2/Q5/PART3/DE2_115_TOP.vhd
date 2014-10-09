@@ -92,6 +92,7 @@ END COMPONENT;
   read_address_int  <= to_integer(unsigned(SW(17 downto 13)));
   we_int <=  not KEY(3);
   LEDG(7 downto 0) <= q_int;
+  LEDR(0) <= we_int; 
   
   B1 : Debounce PORT MAP (CLOCK_50,KEY(0),debounce_int0); 	
  -- B2 : Debounce PORT MAP (CLOCK_50,KEY(3),debounce_int3);  
