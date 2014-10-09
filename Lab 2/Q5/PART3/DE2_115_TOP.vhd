@@ -1,12 +1,19 @@
+-------------------------------------------------------------------------------
 --
--- DE2-115 top-level module (entity declaration)
---
--- William H. Robinson, Vanderbilt University University
---   william.h.robinson@vanderbilt.edu
---
--- Updated from the DE2 top-level module created by 
--- Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
---
+-- Project					: Inferred Memory 
+-- File name				: DE2_115_TOP.vhd
+-- Title				    	: Inferred Memory
+-- Description				: Top-level to implement a 32x8 RAM block using the DE2-115 board
+-- Design library			: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    	: none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date				Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns		Rev A			None
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -36,7 +43,7 @@ entity DE2_115_TOP is
     HEX4 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
     HEX5 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
     HEX6 : out std_logic_vector(6 downto 0);       -- 7-segment display (active low)
-    HEX7 : out std_logic_vector(6 downto 0)      -- 7-segment display (active low)
+    HEX7 : out std_logic_vector(6 downto 0)      	-- 7-segment display (active low)
     );
   
 end DE2_115_TOP;
@@ -46,12 +53,12 @@ ARCHITECTURE structural OF DE2_115_TOP IS
 COMPONENT ram_infer IS
    PORT
    (
-      clock: IN   std_logic;
-      data:  IN   std_logic_vector (7 DOWNTO 0);
-      write_address:  IN  INTEGER RANGE 0 TO 31;
+      clock: 			 IN   std_logic;
+      data:  			 IN   std_logic_vector (7 DOWNTO 0);
+      write_address:  IN   INTEGER RANGE 0 TO 31;
       read_address:   IN   INTEGER RANGE  0 TO 31;
-      we:    IN   std_logic;
-      q:     OUT  std_logic_vector (7 DOWNTO 0)
+      we:    			 IN   std_logic;
+      q:      			 OUT  std_logic_vector (7 DOWNTO 0)
    );
 END COMPONENT;
 
@@ -72,10 +79,8 @@ END COMPONENT;
 
 
   signal data_int: std_logic_vector (7 DOWNTO 0);
-  --signal write_address_int: std_logic_vector (4 DOWNTO 0);
-  --signal read_address_int: std_logic_vector (4 DOWNTO 0);
   signal write_address_int:   INTEGER RANGE 0 TO 31;
-  signal  read_address_int:   INTEGER RANGE  0 TO 31;
+  signal read_address_int:   INTEGER RANGE  0 TO 31;
   signal we_int: std_logic;
   signal q_int: std_logic_vector (7 DOWNTO 0);
   
@@ -95,7 +100,6 @@ END COMPONENT;
   LEDR(0) <= we_int; 
   
   B1 : Debounce PORT MAP (CLOCK_50,KEY(0),debounce_int0); 	
- -- B2 : Debounce PORT MAP (CLOCK_50,KEY(3),debounce_int3);  
   ram8_32_1 : ram_infer port map(debounce_int0,data_int,write_address_int,read_address_int,we_int,q_int);
   
   SSD0: Display_7segment PORT MAP (bcd_in0, HEX0);
@@ -109,15 +113,13 @@ END COMPONENT;
   
   PROCESS(debounce_int0)
   BEGIN 
-  
-  
+
   bcd_in0 <=  data_int(3 downto 0);
   bcd_in1 <=  data_int(7 downto 4);
   
   bcd_in0_temp <=  std_logic_vector(to_unsigned(write_address_int,5));
   bcd_in2 <= bcd_in0_temp(3 downto 0); 
   bcd_in3 <= bcd_in0_temp(4 downto 1) srl 3;
- 
 		
   bcd_in1_temp <=  std_logic_vector(to_unsigned(read_address_int,5));
   bcd_in4 <= bcd_in1_temp(3 downto 0); 
@@ -125,10 +127,8 @@ END COMPONENT;
   
   bcd_in6 <=  q_int(3 downto 0);
   bcd_in7 <=  q_int(7 downto 4);
-  
-  
-  
 			 
   END PROCESS;
-  END structural;
+  
+END structural;
 

@@ -1,3 +1,20 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: Inferred Memory 
+-- File name				: ram_8_32.vhd
+-- Title				    	: Inferred Memory
+-- Description				: Implements a 32x8 RAM block using the DE2-115 board
+-- Design library			: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    	: none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date				Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns		Rev A			None
+-------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

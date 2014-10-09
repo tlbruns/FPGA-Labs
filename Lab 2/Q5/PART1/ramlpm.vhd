@@ -2,8 +2,8 @@
 --
 -- Project					: Memory Part 1  
 -- File name				: ramlpm.vhd
--- Title				   	:  32 depth x 8 bits memopry
--- Description				:  Memory entity
+-- Title				   	: 32 depth x 8 bits memopry
+-- Description				: Memory entity
 -- Design library			: N/A
 -- Analysis Dependency	: none
 -- Simulator(s)			: ModelSim-Altera version 10.1d
@@ -11,8 +11,8 @@
 -- Notes			
 -------------------------------------------------------------------------------
 -- Revisions
---			Date		Author				Revision		Comments
---     10/8/2012	M. Beccani T. Brunst	Rev A			None
+--			Date				Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns		Rev A			None
 -------------------------------------------------------------------------------
 
 LIBRARY ieee;

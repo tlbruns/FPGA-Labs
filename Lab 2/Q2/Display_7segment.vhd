@@ -1,3 +1,25 @@
+-------------------------------------------------------------------------------
+--
+-- Project name			: Display_7segment
+-- File name				: Display_7segment.vhd
+-- Title						: Display_7segment
+-- Description				: Takes a 4-bit hex value as input and outputs the
+--								: corresponding character on a 7-segment display
+--								
+-- Design library			: N/A
+-- Analysis Dependency	: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes						: testbench file is Display_7segment_tb.vhd
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		10/8/2014	T. Bruns & M. Beccani		Rev A			Design creation
+--
+--			
+-------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.ALL;
 
@@ -28,21 +50,3 @@ BEGIN
 					"0001110"	WHEN "1111",	-- F
 					"1111111" WHEN OTHERS;
 END behavioral;
-
---seven <= "0000001" 	WHEN "0000",
---					"1001111"	WHEN "0001",
---					"0010010"	WHEN "0010",
---					"0000110"	WHEN "0011",
---					"1001100"	WHEN "0100",
---					"0100100"	WHEN "0101",
---					"0100000"	WHEN "0110",
---					"0001111"	WHEN "0111",
---					"0000000"	WHEN "1000",
---					"0000100"	WHEN "1001",
---					"0001000"	WHEN "1010",
---					"1100000"	WHEN "1011",
---					"0110001"	WHEN "1100",
---					"1000010"	WHEN "1101",
---					"0110000"	WHEN "1110",
---					"0111000"	WHEN "1111",
---					"1111111" WHEN OTHERS;

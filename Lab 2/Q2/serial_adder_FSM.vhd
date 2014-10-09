@@ -1,19 +1,19 @@
 -------------------------------------------------------------------------------
 --
 -- Project					: Serial Adder
--- File name				:  Serial adder.vhd
+-- File name				: Serial adder.vhd
 -- Title						: Serial Adder 
 -- Description				: This module implements a serial adder with the DE2-115
 
 -- Design library			: N/A
 -- Analysis Dependency	: none
 -- Simulator(s)			: ModelSim-Altera version 10.1d
--- Initialization	    : none
+-- Initialization	    	: none
 -- Notes			
 -------------------------------------------------------------------------------
 -- Revisions
---			Date		Author				Revision		Comments
---     10/8/2012	M. Beccani T. Brunst	Rev A			None
+--			Date			Authors				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns	Rev A			None
 -------------------------------------------------------------------------------
 
 library ieee;

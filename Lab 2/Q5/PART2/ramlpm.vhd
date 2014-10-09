@@ -12,7 +12,7 @@
 -------------------------------------------------------------------------------
 -- Revisions
 --			Date				Author					Revision		Comments
---     10/8/2012	M. Beccani T. Bruns	Rev A			None
+--     10/8/2012	M. Beccani T. Bruns			Rev A			None
 -------------------------------------------------------------------------------
 
 LIBRARY ieee;

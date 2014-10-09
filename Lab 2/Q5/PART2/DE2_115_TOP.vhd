@@ -1,12 +1,19 @@
+---------------------------------------------------------------------------------
 --
--- DE2-115 top-level module (entity declaration)
---
--- William H. Robinson, Vanderbilt University University
---   william.h.robinson@vanderbilt.edu
---
--- Updated from the DE2 top-level module created by 
--- Stephen A. Edwards, Columbia University, sedwards@cs.columbia.edu
---
+-- Project					: LPM RAM 
+-- File name				: DE2_115_TOP.vhd
+-- Title				    	: LPM RAM
+-- Description				: Top-level to implement a 32x8 RAM block using the DE2-115 board
+-- Design library			: N/A
+-- Analysis Dependency	: none
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    	: none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date				Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns		Rev A			None
+-------------------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -104,22 +111,6 @@ END COMPONENT;
   
   PROCESS(debounce_int0)
   BEGIN 
-  
-  
---  bcd_in0 <=  data_int(3 downto 0);
---  bcd_in1 <=  data_int(7 downto 4);
---  
---  bcd_in0_temp <=  std_logic_vector(to_unsigned(write_address_int,5));
---  bcd_in2 <= bcd_in0_temp(3 downto 0); 
---  bcd_in3 <= bcd_in0_temp(4 downto 1) srl 3;
--- 
---		
---  bcd_in1_temp <=  std_logic_vector(to_unsigned(read_address_int,5));
---  bcd_in4 <= bcd_in1_temp(3 downto 0); 
---  bcd_in5 <= bcd_in1_temp(4 downto 1) srl 3;
---  
---  bcd_in6 <=  q_int(3 downto 0);
---  bcd_in7 <=  q_int(7 downto 4);
   
   bcd_in0 <=  q_int(3 downto 0);
   bcd_in1 <=  q_int(7 downto 4);
