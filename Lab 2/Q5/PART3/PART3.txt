@@ -1,0 +1,3 @@
+Q: Describe any differences you boserve in comparison to the circuit from Part II
+
+A: During a write operation, the value displayed is the old register value. The new value is not updated until the next clock pulse.

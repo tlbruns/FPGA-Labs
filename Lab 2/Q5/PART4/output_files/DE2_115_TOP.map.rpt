@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_TOP
-Thu Oct 09 11:41:16 2014
+Thu Oct 09 20:34:58 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,10 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Port Connectivity Checks: "Display_7segment:SSD7"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Display_7segment:SSD7"
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +42,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 09 11:41:16 2014           ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 09 20:34:58 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_TOP                                     ;
 ; Top-level Entity Name              ; DE2_115_TOP                                     ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 156                                             ;
-;     Total combinational functions  ; 146                                             ;
-;     Dedicated logic registers      ; 76                                              ;
-; Total registers                    ; 76                                              ;
+; Total logic elements               ; 35                                              ;
+;     Total combinational functions  ; 35                                              ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
 ; Total pins                         ; 147                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -68,6 +67,8 @@ applicable agreement for further details.
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; DE2_115_TOP        ; DE2_115_TOP        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -76,7 +77,6 @@ applicable agreement for further details.
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
 ; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
 ; Extract Verilog State Machines                                             ; On                 ; On                 ;
@@ -158,45 +158,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
-; Display_7segment.vhd             ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q5/PART4/Display_7segment.vhd ;         ;
-; Debounce.vhd                     ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q5/PART4/Debounce.vhd         ;         ;
-; DE2_115_TOP.vhd                  ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q5/PART4/DE2_115_TOP.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; Display_7segment.vhd             ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q5/PART4/Display_7segment.vhd ;         ;
+; DE2_115_TOP.vhd                  ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q5/PART4/DE2_115_TOP.vhd      ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 156            ;
-;                                             ;                ;
-; Total combinational functions               ; 146            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 48             ;
-;     -- 3 input functions                    ; 26             ;
-;     -- <=2 input functions                  ; 72             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 115            ;
-;     -- arithmetic mode                      ; 31             ;
-;                                             ;                ;
-; Total registers                             ; 76             ;
-;     -- Dedicated logic registers            ; 76             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 147            ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 44             ;
-; Total fan-out                               ; 799            ;
-; Average fan-out                             ; 1.50           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 35           ;
+;                                             ;              ;
+; Total combinational functions               ; 35           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 35           ;
+;     -- 3 input functions                    ; 0            ;
+;     -- <=2 input functions                  ; 0            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 35           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 147          ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; SW[17]~input ;
+; Maximum fan-out                             ; 10           ;
+; Total fan-out                               ; 365          ;
+; Average fan-out                             ; 1.06         ;
++---------------------------------------------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -204,8 +203,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; |DE2_115_TOP               ; 146 (32)          ; 76 (32)      ; 0           ; 0            ; 0       ; 0         ; 147  ; 0            ; |DE2_115_TOP                       ; work         ;
-;    |Debounce:B0|           ; 79 (79)           ; 44 (44)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Debounce:B0           ; work         ;
+; |DE2_115_TOP               ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 147  ; 0            ; |DE2_115_TOP                       ; work         ;
 ;    |Display_7segment:SSD0| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD0 ; work         ;
 ;    |Display_7segment:SSD1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD1 ; work         ;
 ;    |Display_7segment:SSD4| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_TOP|Display_7segment:SSD4 ; work         ;
@@ -220,25 +218,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 76    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; Debounce:B0|SDC[31]                    ; 1       ;
-; Debounce:B0|SDC[0]                     ; 1       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
 
 
 +---------------------------------------------------+
@@ -265,85 +252,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 09 11:41:13 2014
+    Info: Processing started: Thu Oct 09 20:34:56 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ExternalRam -c DE2_115_TOP
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file display_7segment.vhd
     Info (12022): Found design unit 1: Display_7segment-behavioral
     Info (12023): Found entity 1: Display_7segment
-Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
-    Info (12022): Found design unit 1: Debounce-Behavioral
-    Info (12023): Found entity 1: Debounce
-Info (12021): Found 2 design units, including 1 entities, in source file reg_8.vhd
-    Info (12022): Found design unit 1: Reg_8-behavioral
-    Info (12023): Found entity 1: Reg_8
 Info (12021): Found 2 design units, including 1 entities, in source file de2_115_top.vhd
     Info (12022): Found design unit 1: DE2_115_TOP-structural
     Info (12023): Found entity 1: DE2_115_TOP
-Info (12021): Found 2 design units, including 1 entities, in source file reg_5.vhd
-    Info (12022): Found design unit 1: Reg_5-behavioral
-    Info (12023): Found entity 1: Reg_5
-Info (12021): Found 2 design units, including 1 entities, in source file reg_1.vhd
-    Info (12022): Found design unit 1: Reg_1-behavioral
-    Info (12023): Found entity 1: Reg_1
 Info (12127): Elaborating entity "DE2_115_TOP" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(36): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(102): used implicit default value for signal "bcd_in2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(102): used implicit default value for signal "bcd_in3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10873): Using initial value X (don't care) for net "LEDR[16..0]" at DE2_115_TOP.vhd(37)
-Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:B0"
+Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(47): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at DE2_115_TOP.vhd(74): object "data_register" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(77): used implicit default value for signal "bcd_in2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE2_115_TOP.vhd(77): used implicit default value for signal "bcd_in3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10873): Using initial value X (don't care) for net "LEDR[16..0]" at DE2_115_TOP.vhd(48)
 Info (12128): Elaborating entity "Display_7segment" for hierarchy "Display_7segment:SSD0"
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[0]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[1]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[2]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[3]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[4]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[5]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[6]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[7]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[8]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[9]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[10]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[11]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[12]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[13]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[14]" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "SRAM_DQ[15]" and its non-tri-state driver.
-Info (13060): One or more bidirs are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[0]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[1]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[2]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[3]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[4]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[5]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[6]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[7]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[8]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[9]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[10]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[11]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[12]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[13]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[14]" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "SRAM_DQ[15]" is moved to its source
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "SRAM_DQ[0]~synth"
-    Warning (13010): Node "SRAM_DQ[1]~synth"
-    Warning (13010): Node "SRAM_DQ[2]~synth"
-    Warning (13010): Node "SRAM_DQ[3]~synth"
-    Warning (13010): Node "SRAM_DQ[4]~synth"
-    Warning (13010): Node "SRAM_DQ[5]~synth"
-    Warning (13010): Node "SRAM_DQ[6]~synth"
-    Warning (13010): Node "SRAM_DQ[7]~synth"
-    Warning (13010): Node "SRAM_DQ[8]~synth"
-    Warning (13010): Node "SRAM_DQ[9]~synth"
-    Warning (13010): Node "SRAM_DQ[10]~synth"
-    Warning (13010): Node "SRAM_DQ[11]~synth"
-    Warning (13010): Node "SRAM_DQ[12]~synth"
-    Warning (13010): Node "SRAM_DQ[13]~synth"
-    Warning (13010): Node "SRAM_DQ[14]~synth"
-    Warning (13010): Node "SRAM_DQ[15]~synth"
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "SRAM_DQ[8]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[9]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[10]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[11]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[12]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[13]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[14]" is fed by GND
+    Warning (13033): The pin "SRAM_DQ[15]" is fed by GND
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
@@ -410,7 +343,9 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
@@ -418,15 +353,15 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]"
     Warning (15610): No output dependent on input pin "SW[10]"
     Warning (15610): No output dependent on input pin "SW[16]"
-Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 182 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 108 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 156 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 110 warnings
-    Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Thu Oct 09 11:41:16 2014
-    Info: Elapsed time: 00:00:03
+    Info (21061): Implemented 35 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 498 megabytes
+    Info: Processing ended: Thu Oct 09 20:34:58 2014
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 
