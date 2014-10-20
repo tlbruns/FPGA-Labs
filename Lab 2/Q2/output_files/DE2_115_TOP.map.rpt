@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_TOP
-Mon Oct 06 18:14:35 2014
+Fri Oct 10 10:16:57 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 06 18:14:35 2014           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 10 10:16:57 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_TOP                                     ;
 ; Top-level Entity Name              ; DE2_115_TOP                                     ;
@@ -158,16 +158,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; Display_7segment.vhd             ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/Display_7segment.vhd ;         ;
-; Debounce.vhd                     ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/Debounce.vhd         ;         ;
-; DE2_115_TOP.vhd                  ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/DE2_115_TOP.vhd      ;         ;
-; serial_adder_FSM.vhd             ; yes             ; User VHDL File  ; C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/serial_adder_FSM.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; Display_7segment.vhd             ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/Display_7segment.vhd ;         ;
+; Debounce.vhd                     ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/Debounce.vhd         ;         ;
+; DE2_115_TOP.vhd                  ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/DE2_115_TOP.vhd      ;         ;
+; serial_adder_FSM.vhd             ; yes             ; User VHDL File  ; D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/serial_adder_FSM.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -262,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 06 18:14:32 2014
+    Info: Processing started: Fri Oct 10 10:16:54 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off serial_adder -c DE2_115_TOP
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file display_7segment.vhd
@@ -278,16 +278,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file serial_
     Info (12022): Found design unit 1: serial_adder_FSM-behavior
     Info (12023): Found entity 1: serial_adder_FSM
 Info (12127): Elaborating entity "DE2_115_TOP" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDG[8]" at DE2_115_TOP.vhd(37)
-Warning (10873): Using initial value X (don't care) for net "LEDG[6..0]" at DE2_115_TOP.vhd(37)
-Warning (10873): Using initial value X (don't care) for net "LEDR[17..1]" at DE2_115_TOP.vhd(38)
+Warning (10873): Using initial value X (don't care) for net "LEDG[8]" at DE2_115_TOP.vhd(44)
+Warning (10873): Using initial value X (don't care) for net "LEDG[6..0]" at DE2_115_TOP.vhd(44)
+Warning (10873): Using initial value X (don't care) for net "LEDR[17..1]" at DE2_115_TOP.vhd(45)
 Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce:BUTTON"
 Info (12128): Elaborating entity "Display_7segment" for hierarchy "Display_7segment:SSD"
 Info (12128): Elaborating entity "serial_adder_FSM" for hierarchy "serial_adder_FSM:SA1"
-Warning (10631): VHDL Process Statement warning at serial_adder_FSM.vhd(20): inferring latch(es) for signal or variable "state_next", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at serial_adder_FSM.vhd(20): inferring latch(es) for signal or variable "s_next", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "s_next" at serial_adder_FSM.vhd(20)
-Info (10041): Inferred latch for "state_next" at serial_adder_FSM.vhd(20)
+Warning (10631): VHDL Process Statement warning at serial_adder_FSM.vhd(38): inferring latch(es) for signal or variable "state_next", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at serial_adder_FSM.vhd(38): inferring latch(es) for signal or variable "s_next", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "s_next" at serial_adder_FSM.vhd(38)
+Info (10041): Inferred latch for "state_next" at serial_adder_FSM.vhd(38)
 Warning (14026): LATCH primitive "serial_adder_FSM:SA1|s_next" is permanently enabled
 Warning (14026): LATCH primitive "serial_adder_FSM:SA1|state_next" is permanently enabled
 Warning (13024): Output pins are stuck at VCC or GND
@@ -395,8 +395,8 @@ Info (21057): Implemented 197 device resources after synthesis - the final resou
     Info (21059): Implemented 83 output pins
     Info (21061): Implemented 91 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 498 megabytes
-    Info: Processing ended: Mon Oct 06 18:14:35 2014
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Fri Oct 10 10:16:57 2014
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

@@ -1,5 +1,5 @@
 Fitter report for DE2_115_TOP
-Mon Oct 06 18:14:59 2014
+Fri Oct 10 10:17:21 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 06 18:14:58 2014           ;
+; Fitter Status                      ; Successful - Fri Oct 10 10:17:21 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_115_TOP                                     ;
 ; Top-level Entity Name              ; DE2_115_TOP                                     ;
@@ -1132,7 +1132,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/output_files/DE2_115_TOP.pin.
+The pin-out file can be found in D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/output_files/DE2_115_TOP.pin.
 
 
 +----------------------------------------------------------------------+
@@ -3843,7 +3843,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3852,17 +3852,17 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 1 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2
-Info (144001): Generated suppressed messages file C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/output_files/DE2_115_TOP.fit.smsg
+Info (144001): Generated suppressed messages file D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/output_files/DE2_115_TOP.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 846 warnings
-    Info: Peak virtual memory: 862 megabytes
-    Info: Processing ended: Mon Oct 06 18:14:59 2014
-    Info: Elapsed time: 00:00:23
+    Info: Peak virtual memory: 859 megabytes
+    Info: Processing ended: Fri Oct 10 10:17:22 2014
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:23
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Trevor/Documents/School/EECE 277 (FPGA)/Labs/Lab 2/Q2/output_files/DE2_115_TOP.fit.smsg.
+The suppressed messages can be found in D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/Lab 2/Q2/output_files/DE2_115_TOP.fit.smsg.
 
 
