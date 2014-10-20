@@ -105,9 +105,9 @@ BEGIN
 
 	U1: VGA_SYNC_module PORT MAP
 		(clock_50Mhz		=>	CLOCK_50,
-		 red					=>	pixel_row_int(7),
-		 green				=>	pixel_row_int(6),	
-		 blue					=>	pixel_row_int(5),
+		 red					=>	pixel_column_int(7),
+		 green				=>	pixel_column_int(6),	
+		 blue					=>	pixel_column_int(5),
 		 red_out				=>	VGA_R(7),
 		 green_out			=>	VGA_G(7),
 		 blue_out			=>	VGA_B(7),
