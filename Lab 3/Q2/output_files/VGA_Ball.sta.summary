@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -7.010
+TNS   : -13.665
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -1.197
+TNS   : -9.292
+
+Type  : Slow 1200mV 85C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.819
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.711
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.115
+TNS   : -11.911
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -0.968
+TNS   : -7.279
+
+Type  : Slow 1200mV 0C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.799
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.110
+TNS   : -6.046
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -0.086
+TNS   : -0.260
+
+Type  : Fast 1200mV 0C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC_module:U1|vert_sync_out'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.780
+TNS   : 0.000
+
+------------------------------------------------------------
