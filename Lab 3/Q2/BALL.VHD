@@ -11,10 +11,9 @@ ENTITY ball IS
 
    PORT(pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
         Red,Green,Blue 				: OUT std_logic;
+		  Horiz_sync : IN std_logic;
         Vert_sync	: IN std_logic);
-       
-		
-		
+      	
 END ball;
 
 architecture behavior of ball is
@@ -22,15 +21,17 @@ architecture behavior of ball is
 			-- Video Display Signals   
 SIGNAL Ball_on, Direction			: std_logic;
 SIGNAL Size 						: std_logic_vector(9 DOWNTO 0);  
+SIGNAL Ball_X_motion 				: std_logic_vector(9 DOWNTO 0); 
 SIGNAL Ball_Y_motion 				: std_logic_vector(9 DOWNTO 0);
-SIGNAL Ball_Y_pos, Ball_X_pos		: std_logic_vector(9 DOWNTO 0);
+SIGNAL Ball_Y_pos : std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(8,10);
+SIGNAL Ball_X_pos : std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(320,10);
 
 
 BEGIN           
 
 Size <= CONV_STD_LOGIC_VECTOR(8,10);
-Ball_X_pos <= CONV_STD_LOGIC_VECTOR(320,10);
-
+--Ball_X_pos <= CONV_STD_LOGIC_VECTOR(320,10);
+--Ball_Y_pos <= CONV_STD_LOGIC_VECTOR(8,10);
 
 		-- Colors for pixel data on video signal
 Red <=  '1';
@@ -63,8 +64,17 @@ BEGIN
 			ELSIF Ball_Y_pos <= Size THEN
 				Ball_Y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 			END IF;
+			
+			IF ('0' & Ball_X_pos) >= 640 - Size THEN
+				Ball_X_motion <= CONV_STD_LOGIC_VECTOR(-2,10);
+			ELSIF Ball_X_pos <= Size THEN
+				Ball_X_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+			END IF;
+			
 			-- Compute next ball Y position
+			   Ball_X_pos <= Ball_X_pos + Ball_X_motion;
 				Ball_Y_pos <= Ball_Y_pos + Ball_Y_motion;
+				
 END process Move_Ball;
 
 END behavior;

@@ -1,5 +1,5 @@
 Fitter report for VGA_Ball
-Mon Oct 20 15:09:03 2014
+Mon Oct 20 15:47:39 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -69,17 +69,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 20 15:09:03 2014           ;
+; Fitter Status                      ; Successful - Mon Oct 20 15:47:39 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; VGA_Ball                                        ;
 ; Top-level Entity Name              ; VGA_Ball                                        ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 121 / 114,480 ( < 1 % )                         ;
-;     Total combinational functions  ; 112 / 114,480 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 58 / 114,480 ( < 1 % )                          ;
-; Total registers                    ; 58                                              ;
+; Total logic elements               ; 164 / 114,480 ( < 1 % )                         ;
+;     Total combinational functions  ; 149 / 114,480 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 67 / 114,480 ( < 1 % )                          ;
+; Total registers                    ; 67                                              ;
 ; Total pins                         ; 52 / 529 ( 10 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
@@ -1154,8 +1154,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 288 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 288 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 334 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 334 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -1178,7 +1178,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 276     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 322     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 12      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -1194,26 +1194,26 @@ The pin-out file can be found in C:/Users/MARCO/Dropbox/EECE277/HWs and Lab Assi
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 121 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 63                      ;
-;     -- Register only                        ; 9                       ;
-;     -- Combinational with a register        ; 49                      ;
+; Total logic elements                        ; 164 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 97                      ;
+;     -- Register only                        ; 15                      ;
+;     -- Combinational with a register        ; 52                      ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 35                      ;
-;     -- 3 input functions                    ; 29                      ;
-;     -- <=2 input functions                  ; 48                      ;
-;     -- Register only                        ; 9                       ;
+;     -- 4 input functions                    ; 36                      ;
+;     -- 3 input functions                    ; 52                      ;
+;     -- <=2 input functions                  ; 61                      ;
+;     -- Register only                        ; 15                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 55                      ;
-;     -- arithmetic mode                      ; 57                      ;
+;     -- normal mode                          ; 62                      ;
+;     -- arithmetic mode                      ; 87                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 58 / 117,053 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 58 / 114,480 ( < 1 % )  ;
+; Total registers*                            ; 67 / 117,053 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 67 / 114,480 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 11 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 14 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 52 / 529 ( 10 % )       ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -1231,11 +1231,11 @@ The pin-out file can be found in C:/Users/MARCO/Dropbox/EECE277/HWs and Lab Assi
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%            ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%            ;
+; Peak interconnect usage (total/H/V)         ; 0% / 1% / 0%            ;
 ; Maximum fan-out                             ; 49                      ;
 ; Highest non-global fan-out                  ; 12                      ;
-; Total fan-out                               ; 528                     ;
-; Average fan-out                             ; 1.80                    ;
+; Total fan-out                               ; 645                     ;
+; Average fan-out                             ; 1.88                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -1248,25 +1248,25 @@ The pin-out file can be found in C:/Users/MARCO/Dropbox/EECE277/HWs and Lab Assi
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 121 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 63                     ; 0                              ;
-;     -- Register only                        ; 9                      ; 0                              ;
-;     -- Combinational with a register        ; 49                     ; 0                              ;
+; Total logic elements                        ; 164 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 97                     ; 0                              ;
+;     -- Register only                        ; 15                     ; 0                              ;
+;     -- Combinational with a register        ; 52                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 35                     ; 0                              ;
-;     -- 3 input functions                    ; 29                     ; 0                              ;
-;     -- <=2 input functions                  ; 48                     ; 0                              ;
-;     -- Register only                        ; 9                      ; 0                              ;
+;     -- 4 input functions                    ; 36                     ; 0                              ;
+;     -- 3 input functions                    ; 52                     ; 0                              ;
+;     -- <=2 input functions                  ; 61                     ; 0                              ;
+;     -- Register only                        ; 15                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 55                     ; 0                              ;
-;     -- arithmetic mode                      ; 57                     ; 0                              ;
+;     -- normal mode                          ; 62                     ; 0                              ;
+;     -- arithmetic mode                      ; 87                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 58                     ; 0                              ;
-;     -- Dedicated logic registers            ; 58 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 67                     ; 0                              ;
+;     -- Dedicated logic registers            ; 67 / 114480 ( < 1 % )  ; 0 / 114480 ( 0 % )             ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 11 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 14 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 52                     ; 0                              ;
@@ -1283,8 +1283,8 @@ The pin-out file can be found in C:/Users/MARCO/Dropbox/EECE277/HWs and Lab Assi
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 521                    ; 57                             ;
-;     -- Registered Connections               ; 250                    ; 0                              ;
+;     -- Total Connections                    ; 638                    ; 57                             ;
+;     -- Registered Connections               ; 303                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 0                      ; 50                             ;
@@ -2270,12 +2270,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                      ; Library Name ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |VGA_Ball                                ; 121 (0)     ; 58 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 52   ; 0            ; 63 (0)       ; 9 (0)             ; 49 (0)           ; |VGA_Ball                                                                                                ; work         ;
-;    |VGA_SYNC_module:U1|                  ; 76 (76)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 9 (9)             ; 39 (39)          ; |VGA_Ball|VGA_SYNC_module:U1                                                                             ; work         ;
+; |VGA_Ball                                ; 164 (0)     ; 67 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 52   ; 0            ; 97 (0)       ; 15 (0)            ; 52 (0)           ; |VGA_Ball                                                                                                ; work         ;
+;    |VGA_SYNC_module:U1|                  ; 84 (84)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 36 (36)      ; 15 (15)           ; 33 (33)          ; |VGA_Ball|VGA_SYNC_module:U1                                                                             ; work         ;
 ;       |video_PLL:video_PLL_inst|         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst                                                    ; work         ;
 ;          |altpll:altpll_component|       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component                            ; work         ;
 ;             |altpll_dp72:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated ; work         ;
-;    |ball:U2|                             ; 49 (49)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 14 (14)          ; |VGA_Ball|ball:U2                                                                                        ; work         ;
+;    |ball:U2|                             ; 90 (90)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 61 (61)      ; 0 (0)             ; 29 (29)          ; |VGA_Ball|ball:U2                                                                                        ; work         ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2377,22 +2377,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                  ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                                                              ; PIN_Y2             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC_module:U1|LessThan5~0                                                                        ; LCCOMB_X53_Y72_N20 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC_module:U1|LessThan6~2                                                                        ; LCCOMB_X54_Y72_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC_module:U1|v_count[9]~1                                                                       ; LCCOMB_X53_Y72_N26 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC_module:U1|vert_sync_out                                                                      ; FF_X55_Y72_N13     ; 10      ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; VGA_SYNC_module:U1|LessThan5~0                                                                        ; LCCOMB_X47_Y71_N0  ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC_module:U1|LessThan6~2                                                                        ; LCCOMB_X50_Y72_N26 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC_module:U1|v_count[9]~1                                                                       ; LCCOMB_X46_Y71_N8  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC_module:U1|vert_sync_out                                                                      ; FF_X55_Y72_N1      ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 ; VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated|clk[0] ; PLL_1              ; 49      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
 +-------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                                                   ;
-+-------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                                                                                  ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; VGA_SYNC_module:U1|vert_sync_out                                                                      ; FF_X55_Y72_N13 ; 10      ; 1                                    ; Global Clock         ; GCLK13           ; --                        ;
-; VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated|clk[0] ; PLL_1          ; 49      ; 3                                    ; Global Clock         ; GCLK3            ; --                        ;
-+-------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                                                  ;
++-------------------------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                                                                                  ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; VGA_SYNC_module:U1|vert_sync_out                                                                      ; FF_X55_Y72_N1 ; 19      ; 2                                    ; Global Clock         ; GCLK10           ; --                        ;
+; VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated|clk[0] ; PLL_1         ; 49      ; 8                                    ; Global Clock         ; GCLK3            ; --                        ;
++-------------------------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -2402,9 +2402,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------+---------+
 ; VGA_SYNC_module:U1|LessThan5~0                                                                            ; 12      ;
 ; ball:U2|Ball_Y_motion[2]                                                                                  ; 11      ;
+; ball:U2|Ball_X_motion[2]                                                                                  ; 10      ;
 ; VGA_SYNC_module:U1|v_count[9]~1                                                                           ; 10      ;
 ; VGA_SYNC_module:U1|LessThan6~2                                                                            ; 10      ;
 ; VGA_SYNC_module:U1|v_count[4]~0                                                                           ; 8       ;
+; ball:U2|Ball_X_pos[1]                                                                                     ; 8       ;
 ; VGA_SYNC_module:U1|h_count[5]                                                                             ; 7       ;
 ; VGA_SYNC_module:U1|h_count[8]                                                                             ; 7       ;
 ; VGA_SYNC_module:U1|h_count[4]                                                                             ; 6       ;
@@ -2415,6 +2417,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|v_count[2]                                                                             ; 6       ;
 ; VGA_SYNC_module:U1|v_count[4]                                                                             ; 6       ;
 ; VGA_SYNC_module:U1|h_count[6]                                                                             ; 5       ;
+; ball:U2|Ball_X_pos[3]                                                                                     ; 5       ;
+; ball:U2|Ball_X_pos[4]                                                                                     ; 5       ;
+; ball:U2|Ball_X_pos[9]                                                                                     ; 5       ;
+; ball:U2|Ball_Y_pos[3]                                                                                     ; 5       ;
 ; VGA_SYNC_module:U1|v_count[1]                                                                             ; 5       ;
 ; VGA_SYNC_module:U1|v_count[0]                                                                             ; 5       ;
 ; VGA_SYNC_module:U1|v_count[8]                                                                             ; 5       ;
@@ -2422,27 +2428,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|v_count[6]                                                                             ; 5       ;
 ; VGA_SYNC_module:U1|v_count[5]                                                                             ; 5       ;
 ; VGA_SYNC_module:U1|v_count[9]                                                                             ; 5       ;
-; ball:U2|Ball_Y_pos[3]                                                                                     ; 5       ;
-; ball:U2|Ball_Y_pos[8]                                                                                     ; 5       ;
 ; VGA_SYNC_module:U1|Equal0~3                                                                               ; 4       ;
 ; VGA_SYNC_module:U1|h_count[2]                                                                             ; 4       ;
 ; VGA_SYNC_module:U1|h_count[1]                                                                             ; 4       ;
 ; VGA_SYNC_module:U1|h_count[0]                                                                             ; 4       ;
 ; VGA_SYNC_module:U1|process_0~2                                                                            ; 4       ;
-; ball:U2|Ball_Y_pos[1]                                                                                     ; 4       ;
+; ball:U2|Ball_X_pos[2]                                                                                     ; 4       ;
+; ball:U2|Ball_X_pos[5]                                                                                     ; 4       ;
+; ball:U2|Ball_X_pos[6]                                                                                     ; 4       ;
+; ball:U2|Ball_X_pos[7]                                                                                     ; 4       ;
+; ball:U2|Ball_X_pos[8]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[2]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[4]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[5]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[6]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[7]                                                                                     ; 4       ;
+; ball:U2|Ball_Y_pos[8]                                                                                     ; 4       ;
 ; ball:U2|Ball_Y_pos[9]                                                                                     ; 4       ;
+; VGA_SYNC_module:U1|pixel_column[3]                                                                        ; 3       ;
 ; VGA_SYNC_module:U1|pixel_row[3]                                                                           ; 3       ;
-; VGA_SYNC_module:U1|video_on~0                                                                             ; 3       ;
+; ball:U2|Ball_Y_motion[2]~0                                                                                ; 2       ;
 ; VGA_SYNC_module:U1|Equal1~0                                                                               ; 2       ;
 ; VGA_SYNC_module:U1|Equal0~1                                                                               ; 2       ;
 ; VGA_SYNC_module:U1|Equal0~0                                                                               ; 2       ;
 ; VGA_SYNC_module:U1|process_0~0                                                                            ; 2       ;
-; VGA_SYNC_module:U1|green_out~5                                                                            ; 2       ;
+; VGA_SYNC_module:U1|green_out~1                                                                            ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[1]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[2]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[4]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[5]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[6]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[7]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[8]                                                                        ; 2       ;
+; VGA_SYNC_module:U1|pixel_column[9]                                                                        ; 2       ;
 ; VGA_SYNC_module:U1|pixel_row[1]                                                                           ; 2       ;
 ; VGA_SYNC_module:U1|pixel_row[2]                                                                           ; 2       ;
 ; VGA_SYNC_module:U1|pixel_row[4]                                                                           ; 2       ;
@@ -2450,19 +2468,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|pixel_row[6]                                                                           ; 2       ;
 ; VGA_SYNC_module:U1|pixel_row[7]                                                                           ; 2       ;
 ; VGA_SYNC_module:U1|pixel_row[8]                                                                           ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[9]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[5]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[4]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[3]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[6]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[7]                                                                        ; 2       ;
-; VGA_SYNC_module:U1|pixel_column[8]                                                                        ; 2       ;
 ; VGA_SYNC_module:U1|LessThan6~0                                                                            ; 2       ;
+; VGA_SYNC_module:U1|video_on~0                                                                             ; 2       ;
+; VGA_SYNC_module:U1|video_on_h                                                                             ; 2       ;
+; VGA_SYNC_module:U1|video_on_v                                                                             ; 2       ;
 ; CLOCK_50~input                                                                                            ; 1       ;
+; ball:U2|Ball_X_pos[6]~1                                                                                   ; 1       ;
+; ball:U2|Ball_X_pos[8]~0                                                                                   ; 1       ;
+; ball:U2|Ball_Y_pos[3]~0                                                                                   ; 1       ;
+; ball:U2|Ball_X_motion[2]~3                                                                                ; 1       ;
+; ball:U2|Ball_X_motion[2]~2                                                                                ; 1       ;
+; ball:U2|Ball_X_motion[2]~1                                                                                ; 1       ;
+; ball:U2|Ball_X_motion[2]~0                                                                                ; 1       ;
 ; ball:U2|Ball_Y_motion[2]~3                                                                                ; 1       ;
 ; ball:U2|Ball_Y_motion[2]~2                                                                                ; 1       ;
 ; ball:U2|Ball_Y_motion[2]~1                                                                                ; 1       ;
-; ball:U2|Ball_Y_motion[2]~0                                                                                ; 1       ;
 ; VGA_SYNC_module:U1|h_count~3                                                                              ; 1       ;
 ; VGA_SYNC_module:U1|h_count~2                                                                              ; 1       ;
 ; VGA_SYNC_module:U1|process_0~8                                                                            ; 1       ;
@@ -2487,15 +2507,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|process_0~1                                                                            ; 1       ;
 ; VGA_SYNC_module:U1|LessThan1~1                                                                            ; 1       ;
 ; VGA_SYNC_module:U1|LessThan1~0                                                                            ; 1       ;
-; VGA_SYNC_module:U1|green_out~4                                                                            ; 1       ;
-; VGA_SYNC_module:U1|pixel_row[0]                                                                           ; 1       ;
-; VGA_SYNC_module:U1|green_out~3                                                                            ; 1       ;
-; VGA_SYNC_module:U1|green_out~2                                                                            ; 1       ;
-; VGA_SYNC_module:U1|green_out~1                                                                            ; 1       ;
 ; VGA_SYNC_module:U1|green_out~0                                                                            ; 1       ;
-; VGA_SYNC_module:U1|pixel_column[2]                                                                        ; 1       ;
-; VGA_SYNC_module:U1|pixel_column[1]                                                                        ; 1       ;
 ; VGA_SYNC_module:U1|pixel_column[0]                                                                        ; 1       ;
+; VGA_SYNC_module:U1|pixel_row[0]                                                                           ; 1       ;
 ; VGA_SYNC_module:U1|vert_sync                                                                              ; 1       ;
 ; VGA_SYNC_module:U1|horiz_sync                                                                             ; 1       ;
 ; VGA_SYNC_module:U1|LessThan6~1                                                                            ; 1       ;
@@ -2504,25 +2518,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|red_out                                                                                ; 1       ;
 ; VGA_SYNC_module:U1|vert_sync_out                                                                          ; 1       ;
 ; VGA_SYNC_module:U1|horiz_sync_out                                                                         ; 1       ;
-; VGA_SYNC_module:U1|video_on_h                                                                             ; 1       ;
-; VGA_SYNC_module:U1|video_on_v                                                                             ; 1       ;
-; ball:U2|Ball_Y_pos[9]~25                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[8]~24                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[8]~23                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[7]~22                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[7]~21                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[6]~20                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[6]~19                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[5]~18                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[5]~17                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[4]~16                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[4]~15                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[3]~14                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[3]~13                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[2]~12                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[2]~11                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[1]~10                                                                                  ; 1       ;
-; ball:U2|Ball_Y_pos[1]~9                                                                                   ; 1       ;
+; ball:U2|Add6~16                                                                                           ; 1       ;
+; ball:U2|Add6~15                                                                                           ; 1       ;
+; ball:U2|Add6~14                                                                                           ; 1       ;
+; ball:U2|Add6~13                                                                                           ; 1       ;
+; ball:U2|Add6~12                                                                                           ; 1       ;
+; ball:U2|Add6~11                                                                                           ; 1       ;
+; ball:U2|Add6~10                                                                                           ; 1       ;
+; ball:U2|Add6~9                                                                                            ; 1       ;
+; ball:U2|Add6~8                                                                                            ; 1       ;
+; ball:U2|Add6~7                                                                                            ; 1       ;
+; ball:U2|Add6~6                                                                                            ; 1       ;
+; ball:U2|Add6~5                                                                                            ; 1       ;
+; ball:U2|Add6~4                                                                                            ; 1       ;
+; ball:U2|Add6~3                                                                                            ; 1       ;
+; ball:U2|Add6~2                                                                                            ; 1       ;
+; ball:U2|Add6~1                                                                                            ; 1       ;
+; ball:U2|Add6~0                                                                                            ; 1       ;
+; ball:U2|Add7~16                                                                                           ; 1       ;
+; ball:U2|Add7~15                                                                                           ; 1       ;
+; ball:U2|Add7~14                                                                                           ; 1       ;
+; ball:U2|Add7~13                                                                                           ; 1       ;
+; ball:U2|Add7~12                                                                                           ; 1       ;
+; ball:U2|Add7~11                                                                                           ; 1       ;
+; ball:U2|Add7~10                                                                                           ; 1       ;
+; ball:U2|Add7~9                                                                                            ; 1       ;
+; ball:U2|Add7~8                                                                                            ; 1       ;
+; ball:U2|Add7~7                                                                                            ; 1       ;
+; ball:U2|Add7~6                                                                                            ; 1       ;
+; ball:U2|Add7~5                                                                                            ; 1       ;
+; ball:U2|Add7~4                                                                                            ; 1       ;
+; ball:U2|Add7~3                                                                                            ; 1       ;
+; ball:U2|Add7~2                                                                                            ; 1       ;
+; ball:U2|Add7~1                                                                                            ; 1       ;
 ; VGA_SYNC_module:U1|Add0~18                                                                                ; 1       ;
 ; VGA_SYNC_module:U1|Add0~17                                                                                ; 1       ;
 ; VGA_SYNC_module:U1|Add0~16                                                                                ; 1       ;
@@ -2561,6 +2589,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC_module:U1|Add1~2                                                                                 ; 1       ;
 ; VGA_SYNC_module:U1|Add1~1                                                                                 ; 1       ;
 ; VGA_SYNC_module:U1|Add1~0                                                                                 ; 1       ;
+; ball:U2|LessThan1~18                                                                                      ; 1       ;
+; ball:U2|LessThan1~17                                                                                      ; 1       ;
+; ball:U2|LessThan1~15                                                                                      ; 1       ;
+; ball:U2|LessThan1~13                                                                                      ; 1       ;
+; ball:U2|LessThan1~11                                                                                      ; 1       ;
+; ball:U2|LessThan1~9                                                                                       ; 1       ;
+; ball:U2|LessThan1~7                                                                                       ; 1       ;
+; ball:U2|LessThan1~5                                                                                       ; 1       ;
+; ball:U2|LessThan1~3                                                                                       ; 1       ;
+; ball:U2|LessThan1~1                                                                                       ; 1       ;
+; ball:U2|Add1~10                                                                                           ; 1       ;
+; ball:U2|Add1~9                                                                                            ; 1       ;
+; ball:U2|Add1~8                                                                                            ; 1       ;
+; ball:U2|Add1~7                                                                                            ; 1       ;
+; ball:U2|Add1~6                                                                                            ; 1       ;
+; ball:U2|Add1~5                                                                                            ; 1       ;
+; ball:U2|Add1~4                                                                                            ; 1       ;
+; ball:U2|Add1~3                                                                                            ; 1       ;
+; ball:U2|Add1~2                                                                                            ; 1       ;
+; ball:U2|Add1~1                                                                                            ; 1       ;
+; ball:U2|Add1~0                                                                                            ; 1       ;
 ; ball:U2|Add3~10                                                                                           ; 1       ;
 ; ball:U2|LessThan3~16                                                                                      ; 1       ;
 ; ball:U2|LessThan3~15                                                                                      ; 1       ;
@@ -2581,6 +2630,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ball:U2|Add3~2                                                                                            ; 1       ;
 ; ball:U2|Add3~1                                                                                            ; 1       ;
 ; ball:U2|Add3~0                                                                                            ; 1       ;
+; ball:U2|LessThan0~16                                                                                      ; 1       ;
+; ball:U2|LessThan0~15                                                                                      ; 1       ;
+; ball:U2|LessThan0~13                                                                                      ; 1       ;
+; ball:U2|LessThan0~11                                                                                      ; 1       ;
+; ball:U2|LessThan0~9                                                                                       ; 1       ;
+; ball:U2|LessThan0~7                                                                                       ; 1       ;
+; ball:U2|LessThan0~5                                                                                       ; 1       ;
+; ball:U2|LessThan0~3                                                                                       ; 1       ;
+; ball:U2|LessThan0~1                                                                                       ; 1       ;
+; ball:U2|Add0~10                                                                                           ; 1       ;
+; ball:U2|Add0~9                                                                                            ; 1       ;
+; ball:U2|Add0~8                                                                                            ; 1       ;
+; ball:U2|Add0~7                                                                                            ; 1       ;
+; ball:U2|Add0~6                                                                                            ; 1       ;
+; ball:U2|Add0~5                                                                                            ; 1       ;
+; ball:U2|Add0~4                                                                                            ; 1       ;
+; ball:U2|Add0~3                                                                                            ; 1       ;
+; ball:U2|Add0~2                                                                                            ; 1       ;
+; ball:U2|Add0~1                                                                                            ; 1       ;
+; ball:U2|Add0~0                                                                                            ; 1       ;
 ; ball:U2|LessThan2~16                                                                                      ; 1       ;
 ; ball:U2|LessThan2~15                                                                                      ; 1       ;
 ; ball:U2|LessThan2~13                                                                                      ; 1       ;
@@ -2601,15 +2670,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ball:U2|Add2~2                                                                                            ; 1       ;
 ; ball:U2|Add2~1                                                                                            ; 1       ;
 ; ball:U2|Add2~0                                                                                            ; 1       ;
-; ball:U2|Add0~10                                                                                           ; 1       ;
-; ball:U2|Add0~9                                                                                            ; 1       ;
-; ball:U2|Add0~8                                                                                            ; 1       ;
-; ball:U2|Add0~7                                                                                            ; 1       ;
-; ball:U2|Add0~6                                                                                            ; 1       ;
-; ball:U2|Add0~5                                                                                            ; 1       ;
-; ball:U2|Add0~4                                                                                            ; 1       ;
-; ball:U2|Add0~3                                                                                            ; 1       ;
-; ball:U2|Add0~1                                                                                            ; 1       ;
 ; VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated|pll1~FBOUT ; 1       ;
 +-----------------------------------------------------------------------------------------------------------+---------+
 
@@ -2619,21 +2679,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-------------------------+
 ; Other Routing Resource Type ; Usage                   ;
 +-----------------------------+-------------------------+
-; Block interconnects         ; 123 / 342,891 ( < 1 % ) ;
+; Block interconnects         ; 163 / 342,891 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 10,120 ( 0 % )      ;
-; C4 interconnects            ; 28 / 209,544 ( < 1 % )  ;
-; Direct links                ; 63 / 342,891 ( < 1 % )  ;
+; C4 interconnects            ; 19 / 209,544 ( < 1 % )  ;
+; Direct links                ; 62 / 342,891 ( < 1 % )  ;
 ; Global clocks               ; 2 / 20 ( 10 % )         ;
-; Local interconnects         ; 75 / 119,088 ( < 1 % )  ;
-; R24 interconnects           ; 1 / 9,963 ( < 1 % )     ;
-; R4 interconnects            ; 51 / 289,782 ( < 1 % )  ;
+; Local interconnects         ; 95 / 119,088 ( < 1 % )  ;
+; R24 interconnects           ; 3 / 9,963 ( < 1 % )     ;
+; R4 interconnects            ; 80 / 289,782 ( < 1 % )  ;
 +-----------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.00) ; Number of LABs  (Total = 11) ;
+; Number of Logic Elements  (Average = 11.71) ; Number of LABs  (Total = 14) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 3                            ;
 ; 2                                           ; 0                            ;
@@ -2643,117 +2703,116 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 5                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 6                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.45) ; Number of LABs  (Total = 11) ;
+; LAB-wide Signals  (Average = 1.21) ; Number of LABs  (Total = 14) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 11                           ;
-; 1 Clock enable                     ; 5                            ;
+; 1 Clock                            ; 12                           ;
+; 1 Clock enable                     ; 4                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.36) ; Number of LABs  (Total = 11) ;
+; Number of Signals Sourced  (Average = 13.71) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 3                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 0                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
+; 26                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.73) ; Number of LABs  (Total = 11) ;
+; Number of Signals Sourced Out  (Average = 6.14) ; Number of LABs  (Total = 14) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 3                            ;
+; 1                                               ; 5                            ;
 ; 2                                               ; 1                            ;
 ; 3                                               ; 0                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 1                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 0                            ;
 ; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 1                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 0                            ;
 ; 14                                              ; 0                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.36) ; Number of LABs  (Total = 11) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 3                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 4                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 0                            ;
-; 17                                          ; 0                            ;
-; 18                                          ; 0                            ;
-; 19                                          ; 1                            ;
-; 20                                          ; 0                            ;
-; 21                                          ; 0                            ;
-; 22                                          ; 1                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 10.21) ; Number of LABs  (Total = 14) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 4                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
++----------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -3900,7 +3959,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "UART_RTS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_RXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "UART_TXD" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -3912,7 +3971,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3923,10 +3982,10 @@ Warning (169177): 1 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2
 Info (144001): Generated suppressed messages file C:/Users/MARCO/Dropbox/EECE277/HWs and Lab Assigment/Laboratory3/Problem2/output_files/VGA_Ball.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 955 warnings
-    Info: Peak virtual memory: 854 megabytes
-    Info: Processing ended: Mon Oct 20 15:09:04 2014
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 860 megabytes
+    Info: Processing ended: Mon Oct 20 15:47:39 2014
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +----------------------------+

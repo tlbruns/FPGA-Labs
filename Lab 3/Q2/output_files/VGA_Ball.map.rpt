@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_Ball
-Mon Oct 20 15:08:36 2014
+Mon Oct 20 15:47:13 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,11 +16,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Analysis & Synthesis IP Cores Summary
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component
- 13. altpll Parameter Settings by Entity Instance
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component
+ 14. altpll Parameter Settings by Entity Instance
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +47,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 20 15:08:36 2014           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 20 15:47:13 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; VGA_Ball                                        ;
 ; Top-level Entity Name              ; VGA_Ball                                        ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 134                                             ;
-;     Total combinational functions  ; 112                                             ;
-;     Dedicated logic registers      ; 58                                              ;
-; Total registers                    ; 58                                              ;
+; Total logic elements               ; 171                                             ;
+;     Total combinational functions  ; 149                                             ;
+;     Dedicated logic registers      ; 67                                              ;
+; Total registers                    ; 67                                              ;
 ; Total pins                         ; 52                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -184,20 +185,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                 ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 134                                                                                                   ;
+; Estimated Total logic elements              ; 171                                                                                                   ;
 ;                                             ;                                                                                                       ;
-; Total combinational functions               ; 112                                                                                                   ;
+; Total combinational functions               ; 149                                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                                       ;
-;     -- 4 input functions                    ; 35                                                                                                    ;
-;     -- 3 input functions                    ; 29                                                                                                    ;
-;     -- <=2 input functions                  ; 48                                                                                                    ;
+;     -- 4 input functions                    ; 36                                                                                                    ;
+;     -- 3 input functions                    ; 52                                                                                                    ;
+;     -- <=2 input functions                  ; 61                                                                                                    ;
 ;                                             ;                                                                                                       ;
 ; Logic elements by mode                      ;                                                                                                       ;
-;     -- normal mode                          ; 55                                                                                                    ;
-;     -- arithmetic mode                      ; 57                                                                                                    ;
+;     -- normal mode                          ; 62                                                                                                    ;
+;     -- arithmetic mode                      ; 87                                                                                                    ;
 ;                                             ;                                                                                                       ;
-; Total registers                             ; 58                                                                                                    ;
-;     -- Dedicated logic registers            ; 58                                                                                                    ;
+; Total registers                             ; 67                                                                                                    ;
+;     -- Dedicated logic registers            ; 67                                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                                     ;
 ;                                             ;                                                                                                       ;
 ; I/O pins                                    ; 52                                                                                                    ;
@@ -207,8 +208,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                                                                                       ;
 ; Maximum fan-out node                        ; VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 50                                                                                                    ;
-; Total fan-out                               ; 515                                                                                                   ;
-; Average fan-out                             ; 1.87                                                                                                  ;
+; Total fan-out                               ; 628                                                                                                   ;
+; Average fan-out                             ; 1.96                                                                                                  ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------+
 
 
@@ -217,12 +218,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |VGA_Ball                                ; 112 (0)           ; 58 (0)       ; 0           ; 0            ; 0       ; 0         ; 52   ; 0            ; |VGA_Ball                                                                                                ; work         ;
-;    |VGA_SYNC_module:U1|                  ; 63 (63)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|VGA_SYNC_module:U1                                                                             ; work         ;
+; |VGA_Ball                                ; 149 (0)           ; 67 (0)       ; 0           ; 0            ; 0       ; 0         ; 52   ; 0            ; |VGA_Ball                                                                                                ; work         ;
+;    |VGA_SYNC_module:U1|                  ; 59 (59)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|VGA_SYNC_module:U1                                                                             ; work         ;
 ;       |video_PLL:video_PLL_inst|         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst                                                    ; work         ;
 ;          |altpll:altpll_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component                            ; work         ;
 ;             |altpll_dp72:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_dp72:auto_generated ; work         ;
-;    |ball:U2|                             ; 49 (49)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|ball:U2                                                                                        ; work         ;
+;    |ball:U2|                             ; 90 (90)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA_Ball|ball:U2                                                                                        ; work         ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -241,12 +242,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
+; ball:U2|Ball_X_motion[3..9]            ; Merged with ball:U2|Ball_X_motion[2]   ;
 ; ball:U2|Ball_Y_motion[3..9]            ; Merged with ball:U2|Ball_Y_motion[2]   ;
+; ball:U2|Ball_X_motion[0]               ; Stuck at GND due to stuck port data_in ;
 ; ball:U2|Ball_Y_motion[0]               ; Stuck at GND due to stuck port data_in ;
 ; ball:U2|Ball_Y_pos[0]                  ; Stuck at GND due to stuck port data_in ;
+; ball:U2|Ball_X_pos[0]                  ; Stuck at GND due to stuck port data_in ;
+; ball:U2|Ball_X_motion[1]               ; Stuck at VCC due to stuck port data_in ;
 ; ball:U2|Ball_Y_motion[1]               ; Stuck at VCC due to stuck port data_in ;
 ; VGA_SYNC_module:U1|pixel_row[9]        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
+; ball:U2|Ball_Y_pos[1]                  ; Merged with ball:U2|Ball_X_pos[1]      ;
+; Total Number of Removed Registers = 22 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -255,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
+; Total registers                              ; 67    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -265,12 +271,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ball:U2|Ball_Y_pos[3]                  ; 5       ;
+; ball:U2|Ball_X_pos[8]                  ; 4       ;
+; ball:U2|Ball_X_pos[6]                  ; 4       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGA_Ball|VGA_SYNC_module:U1|v_count[9] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VGA_Ball|ball:U2|Ball_X_motion[1]      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VGA_Ball|ball:U2|Ball_Y_motion[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
@@ -681,7 +700,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 20 15:08:32 2014
+    Info: Processing started: Mon Oct 20 15:47:09 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_Ball -c VGA_Ball
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file video_pll.vhd
@@ -809,14 +828,14 @@ Warning (21074): Design contains 22 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[15]"
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
-Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 228 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 138 logic cells
+    Info (21061): Implemented 175 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 498 megabytes
-    Info: Processing ended: Mon Oct 20 15:08:36 2014
+    Info: Peak virtual memory: 499 megabytes
+    Info: Processing ended: Mon Oct 20 15:47:13 2014
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

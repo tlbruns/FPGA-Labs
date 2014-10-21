@@ -87,9 +87,8 @@ COMPONENT ball
 
    PORT(pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
         Red,Green,Blue 				: OUT std_logic;
+		  Horiz_sync : IN std_logic;
         Vert_sync	: IN std_logic);
-       
-
 END COMPONENT;
 
 
@@ -136,7 +135,8 @@ BEGIN
 		 Red				=> red_int,
 		 Green			=> green_int,
 		 Blue				=> blue_int,
-		 Vert_sync		=> vert_sync_int
+		 Vert_sync		=> vert_sync_int,
+		 Horiz_sync 	=> horiz_sync_int
 		);
 		
 
