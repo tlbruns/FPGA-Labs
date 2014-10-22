@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -9.730
+TNS   : -27.073
+
+Type  : Slow 1200mV 85C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.754
+TNS   : -134.394
+
+Type  : Slow 1200mV 85C Model Setup 'Debounce:db1|DBx'
+Slack : -0.192
+TNS   : -0.192
+
+Type  : Slow 1200mV 85C Model Setup 'Debounce:db0|DBx'
+Slack : -0.189
+TNS   : -0.189
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -0.028
+TNS   : -0.037
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -0.367
+TNS   : -0.977
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.239
+TNS   : -0.405
+
+Type  : Slow 1200mV 85C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Debounce:db1|DBx'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Debounce:db0|DBx'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Debounce:db0|DBx'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Debounce:db1|DBx'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.680
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -9.053
+TNS   : -25.140
+
+Type  : Slow 1200mV 0C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.975
+TNS   : -116.147
+
+Type  : Slow 1200mV 0C Model Setup 'Debounce:db1|DBx'
+Slack : -0.073
+TNS   : -0.073
+
+Type  : Slow 1200mV 0C Model Setup 'Debounce:db0|DBx'
+Slack : -0.071
+TNS   : -0.071
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -0.316
+TNS   : -0.842
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.130
+TNS   : -0.194
+
+Type  : Slow 1200mV 0C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Debounce:db0|DBx'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Debounce:db1|DBx'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Debounce:db0|DBx'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Debounce:db1|DBx'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.689
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -4.193
+TNS   : -11.514
+
+Type  : Fast 1200mV 0C Model Setup 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.941
+TNS   : -68.431
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Debounce:db1|DBx'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Debounce:db0|DBx'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.323
+TNS   : -0.599
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : -0.319
+TNS   : -0.902
+
+Type  : Fast 1200mV 0C Model Hold 'Debounce:db0|DBx'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Debounce:db1|DBx'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Debounce:db0|DBx'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Debounce:db1|DBx'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC_module:U1|pixel_column[3]'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.266
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'U1|video_PLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.781
+TNS   : 0.000
+
+------------------------------------------------------------
