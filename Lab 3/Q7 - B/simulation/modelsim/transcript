@@ -1,0 +1,7 @@
+# Compile of LCD_marquee.vhd failed with 2 errors.
+# Compile of LCD_marquee.vhd failed with 2 errors.
+# Compile of LCD_marquee.vhd failed with 2 errors.
+# Compile of counter_1Hz.vhd was successful.
+# Compile of lcd_controller.vhd was successful.
+# 3 compiles, 1 failed with 2 errors. 
+vsim +altera -do Q7_LCD_marquee_run_msim_rtl_vhdl.do -l msim_transcript -gui work.lcd_marquee

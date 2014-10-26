@@ -1,0 +1,27 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\MARCO\Altera Projects\FPGA-Labs\Lab 3\Q7 - B\simulation\modelsim
+Elcd_marquee
+w1414286677
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\MARCO\Altera Projects\FPGA-Labs\Lab 3\Q7 - B\simulation\modelsim
+8C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd
+FC:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd
+l0
+L31
+V:W;H]9z4m_6VoIhmXFMj50
+!s100 _Dk`K33E<GH2jQ4fFXTM;3
+Z6 OV;C;10.1d;51
+31
+!i10b 1
+!s108 1414287112.614000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd|
+!s107 C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd|
+o-93 -work work -O0
+Z7 tExplicit 1

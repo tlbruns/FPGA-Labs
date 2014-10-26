@@ -1,0 +1,36 @@
+{C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/lcd_controller.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/lcd_controller.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lcd_controller
+-- Compiling architecture controller of lcd_controller
+
+} {} {}} {C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/counter_1Hz.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/counter_1Hz.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity counter_1Hz
+-- Compiling architecture behv of counter_1Hz
+
+} {} {}} {C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd} {0 {vcom -work work -2002 -explicit {C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity lcd_marquee
+-- Compiling architecture behavior of lcd_marquee
+** Error: C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd(129): (vcom-1436) Actual expression (prefix expression) of formal "reset_n" is not globally static.
+
+** Error: C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/LCD_marquee.vhd(218): VHDL Compiler exiting
+
+} {11.0 12.0 13.0 14.0} {}}

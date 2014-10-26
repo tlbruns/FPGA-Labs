@@ -1,0 +1,5 @@
+# vsim +altera -do Q7_LCD_marquee_run_msim_rtl_vhdl.do -l msim_transcript -gui work.lcd_marquee 
+# Loading std.standard
+# ** Error: (vsim-3173) Entity 'C:/Users/MARCO/Altera Projects/FPGA-Labs/Lab 3/Q7 - B/simulation/modelsim/work.lcd_marquee' has no architecture.
+# 
+# Error loading design
