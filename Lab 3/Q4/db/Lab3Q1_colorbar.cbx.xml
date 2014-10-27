@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Lab3Q1_colorbar">
+		<CBX_INST_ENTRY INSTANCE_NAME="|VGA_ColorBar|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component" CBX_FILE_NAME="altpll_fs72.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
