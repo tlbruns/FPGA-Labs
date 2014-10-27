@@ -8,7 +8,8 @@ ENTITY lcd_marquee IS
 
 
 	PORT
-	( 
+	(
+	
     CLOCK_50	: IN STD_LOGIC;  -- 50 MHz
     -- 16 X 2 LCD Module
     LCD_BLON : out std_logic;      							-- Back Light ON/OFF
@@ -30,8 +31,9 @@ ARCHITECTURE behavior OF lcd_marquee IS
   CONSTANT lcd_line2 : lcd_line := (X"46",X"50",X"47",X"41",X"20",X"44",X"65",X"73",X"69",X"67",X"6e",X"20",X"20",X"20",X"20",X"20");
   CONSTANT  goto_line1 : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"90");   
   CONSTANT  goto_line2 : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"D0");
+  --SIGNAL count_enable1 : STD_LOGIC; 
   SIGNAL Q1 : STD_LOGIC; 
-  
+
   
   COMPONENT lcd_controller IS
     PORT(
@@ -47,7 +49,7 @@ ARCHITECTURE behavior OF lcd_marquee IS
 COMPONENT counter_1Hz IS   
 	generic (
 	  width: natural := 26;
-	  max_count: natural := 2500000 -- sets counter frequency 
+	  max_count: natural := 2000000    -- 50 MHz / 1 Hz
 	);
 	port (
 	  clock:  in std_logic;
@@ -80,13 +82,14 @@ BEGIN
 	Q => Q1
   );
   
-
+ -- count_enable1 <= '1';
+  --Q1 <= Q1;
   LCD_ON <='1';
   
   PROCESS(CLOCK_50)
   VARIABLE counter : INTEGER := 0; 
   VARIABLE memory_offset  : INTEGER := 0; 
-  VARIABLE display_offset  : INTEGER := 0;
+  VARIABLE display_offset  : INTEGER := 0; 
   BEGIN
   IF(CLOCK_50 'EVENT AND CLOCK_50 = '1') THEN
 			IF(lcd_busy = '0' AND lcd_enable = '0' AND Q1 = '1') THEN 
@@ -104,17 +107,16 @@ BEGIN
 								display_offset := display_offset + 1; 
 								counter := 0;
 				 IF(display_offset = 16) THEN display_offset := 0;  END IF; 
-				 IF (memory_offset = 24) THEN memory_offset := -16; END IF; -- if cursor is on the last digit, must reset at memory_offset = 25
+				 IF (memory_offset = 25) THEN memory_offset := -15; END IF;
 
-				 WHEN OTHERS =>  counter := 0;
+				 WHEN OTHERS =>  counter := 1;
 				 END CASE;
-				
-				ELSE
-				lcd_enable <= '0';
+	
+	ELSE
+	lcd_enable <= '0';
 		   
         
-			END IF;
+      END IF;
     END IF;
-	 
   END PROCESS;
 END behavior;
