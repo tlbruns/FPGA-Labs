@@ -25,7 +25,7 @@ entity counter_1Hz is
 
 	generic (
 	  width: natural := 26;
-	  max_count: natural := 2000000     -- 50 MHz / 1 Hz
+	  max_count: natural := 5000000     -- 50 MHz / 1 Hz
 	);
 	port (
 	  clock:  in std_logic;
