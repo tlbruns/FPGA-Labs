@@ -58,7 +58,7 @@ begin
             
             when x"06" => sreg <= x"8C00"; -- RGB444 Set RGB format
             when x"07" => sreg <= x"0400"; -- COM1   no CCIR601
-            when x"08" => sreg <= x"4010"; -- COM15  Full 0-255 output, RGB 565
+             when x"08" => sreg <= x"4010"; -- COM15  Full 0-255 output, RGB 565
             when x"09" => sreg <= x"3a04"; -- TSLB   Set UV ordering,  do not auto-reset window
             when x"0A" => sreg <= x"1438"; -- COM9  - AGC Celling
             when x"0B" => sreg <= x"4f40"; --x"4fb3"; -- MTX1  - colour conversion matrix
