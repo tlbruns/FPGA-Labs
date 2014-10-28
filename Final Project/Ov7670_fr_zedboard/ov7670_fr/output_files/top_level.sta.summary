@@ -3,35 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'GPIO[33]'
-Slack : -4.193
-TNS   : -1348.760
+Slack : -4.138
+TNS   : -1304.214
 
 Type  : Slow 1200mV 85C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 9.807
+Slack : 9.626
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 32.807
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'GPIO[33]'
-Slack : 0.364
+Slack : 32.731
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.372
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[33]'
+Slack : 0.349
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.384
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[33]'
 Slack : -3.210
-TNS   : -1108.516
+TNS   : -1107.961
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 9.706
+Slack : 9.705
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -43,27 +43,27 @@ Slack : 19.713
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'GPIO[33]'
-Slack : -3.756
-TNS   : -1209.318
+Slack : -3.730
+TNS   : -1160.102
 
 Type  : Slow 1200mV 0C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 10.645
+Slack : 10.551
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 33.324
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'GPIO[33]'
-Slack : 0.321
+Slack : 33.297
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.354
+Slack : 0.297
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
 Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[33]'
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[33]'
@@ -71,7 +71,7 @@ Slack : -3.210
 TNS   : -1082.264
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 9.708
+Slack : 9.709
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -79,43 +79,43 @@ Slack : 9.799
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 19.712
+Slack : 19.709
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'GPIO[33]'
-Slack : -1.654
-TNS   : -493.682
+Slack : -1.670
+TNS   : -487.039
 
 Type  : Fast 1200mV 0C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 15.203
+Slack : 15.108
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 36.298
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'GPIO[33]'
-Slack : 0.129
+Slack : 35.928
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.161
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[33]'
+Slack : 0.122
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.163
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[33]'
 Slack : -3.000
-TNS   : -664.314
+TNS   : -662.979
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.400
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 9.753
+Slack : 9.754
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'

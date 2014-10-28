@@ -17,19 +17,15 @@ entity top_level is
 			  SW  : in std_logic_vector(17 downto 0);        -- DPDT switches
            config_finished : out STD_LOGIC;
            
-           VGA_HS  : out  STD_LOGIC;
-           VGA_VS : out  STD_LOGIC;
-       
-			  
+           VGA_HS  : out  STD_LOGIC;               -- H_SYNC
+           VGA_VS : out  STD_LOGIC;                -- V_SYNC
 			  VGA_BLANK_N : out std_logic;            -- BLANK
-           VGA_CLK 	 : out std_logic;            -- Clock
-			  VGA_SYNC_N  : out std_logic;         -- SYNC
-			  
-      -- VGA_HS 		 : out std_logic;            -- H_SYNC
-     -- VGA_VS 		 : out std_logic;            -- V_SYNC
-      VGA_R 		 : out unsigned(7 downto 0);-- unsigned(9 downto 0); -- Red[9:0]
-      VGA_G 		 : out unsigned(7 downto 0);-- unsigned(9 downto 0); -- Green[9:0]
-      VGA_B 		 : out unsigned(7 downto 0)--unsigned(9 downto 0) -- Blue[9:0]
+           VGA_CLK 	 : out std_logic;             -- Clock
+			  VGA_SYNC_N  : out std_logic;            -- SYNC
+			           
+      VGA_R 		 : out unsigned(7 downto 0);
+      VGA_G 		 : out unsigned(7 downto 0);
+      VGA_B 		 : out unsigned(7 downto 0)
            
         --   ov7670_pclk  : in  STD_LOGIC;
        --    ov7670_xclk  : out STD_LOGIC;
@@ -168,21 +164,30 @@ END COMPONENT;
    signal rdaddress  : std_logic_vector(18 downto 0);
    signal rddata     : std_logic_vector(11 downto 0);
    signal red,green,blue : std_logic_vector(7 downto 0);
+	signal GPIO_32 : std_logic;
 	
    signal activeArea : std_logic;
    
    signal rez_160x120 : std_logic;
    signal rez_320x240 : std_logic;
 	
+	signal puppa 		: std_logic;
+	
 begin
-   VGA_CLK <= clk_vga;
-   vga_r <=  unsigned(red(7 downto 4) & "0000");
-   vga_g <=  unsigned(red(7 downto 4) & "0000");
-   vga_b <=  unsigned(red(7 downto 4) & "0000") ;
 
+   VGA_CLK <= clk_vga;
+	VGA_VS <= vsync;
+	VGA_SYNC_N <= nsync;
+	VGA_BLANK_N <= nBlank; 
+	
+	
+   vga_r <=  unsigned( "0" & red(7 downto 4)   & "000");
+   vga_g <=  unsigned( "0" & red(7 downto 4) & "000");
+   vga_b <=  unsigned( "0" & red(7 downto 4)  & "000");
+	
    rez_160x120 <= SW(17);
    rez_320x240 <= SW(16);
-
+	
 	
 	Inst_vga_pll: vga_pll PORT MAP(
 		inclk0 => CLOCK_50,
@@ -196,7 +201,7 @@ begin
 --    CLK50_camera => CLK_camera,
  --    CLK25_vga => CLK_vga);
 
-    VGA_VS <= vsync;
+    
    
 	Inst_VGA: VGA PORT MAP(
 		CLK25      => clk_vga,
@@ -205,8 +210,8 @@ begin
 		clkout     => open,
 		Hsync      => VGA_HS,
 		Vsync      => vsync,
-		Nblank     => VGA_BLANK_N,
-		Nsync      => VGA_SYNC_N,
+		Nblank     => NBlank,
+		Nsync      => nsync,
       activeArea => activeArea
 	);
 

@@ -812,11 +812,11 @@ GND                          : W17       : gnd    :                   :         
 VCCINT                       : W18       : power  :                   : 1.2V    :           :                
 GND                          : W19       : gnd    :                   :         :           :                
 VCCINT                       : W20       : power  :                   : 1.2V    :           :                
-config_finished              : W21       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT               : W21       :        :                   :         : 5         :                
 RESERVED_INPUT               : W22       :        :                   :         : 5         :                
 GND                          : W23       : gnd    :                   :         :           :                
 VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
-RESERVED_INPUT               : W25       :        :                   :         : 5         :                
+config_finished              : W25       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT               : W26       :        :                   :         : 5         :                
 RESERVED_INPUT               : W27       :        :                   :         : 5         :                
 RESERVED_INPUT               : W28       :        :                   :         : 5         :                
