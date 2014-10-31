@@ -19,20 +19,17 @@ END ball;
 architecture behavior of ball is
 
 			-- Video Display Signals   
-SIGNAL Ball_on, Direction			: std_logic;
-SIGNAL Size 						: std_logic_vector(9 DOWNTO 0);  
-SIGNAL Ball_X_motion 				: std_logic_vector(9 DOWNTO 0); 
-SIGNAL Ball_Y_motion 				: std_logic_vector(9 DOWNTO 0);
-SIGNAL Ball_Y_pos : std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(8,10);
-SIGNAL Ball_X_pos : std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(320,10);
+SIGNAL Ball_on, Direction : std_logic;
+SIGNAL Size 			: std_logic_vector(9 DOWNTO 0);  
+SIGNAL Ball_X_motion : std_logic_vector(9 DOWNTO 0); 
+SIGNAL Ball_Y_motion : std_logic_vector(9 DOWNTO 0);
+SIGNAL Ball_Y_pos 	: std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(8,10);
+SIGNAL Ball_X_pos 	: std_logic_vector(9 DOWNTO 0)  := CONV_STD_LOGIC_VECTOR(320,10);
 
 
 BEGIN           
 
 Size <= CONV_STD_LOGIC_VECTOR(8,10);
---Ball_X_pos <= CONV_STD_LOGIC_VECTOR(320,10);
---Ball_Y_pos <= CONV_STD_LOGIC_VECTOR(8,10);
-
 		-- Colors for pixel data on video signal
 Red <=  '1';
 		-- Turn off Green and Blue when displaying ball

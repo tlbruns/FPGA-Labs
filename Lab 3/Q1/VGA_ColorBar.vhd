@@ -15,44 +15,36 @@
 -------------------------------------------------------------------------------
 --
 -- Revisions
---			Date		Author			Revision		Comments
---		3/11/2008		W.H.Robinson	Rev A			Creation
---		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
---
+--			Date				Author				Revision		Comments
+--		3/11/2008		W.H.Robinson			Rev A			Creation
+--		3/13/2012		W.H.Robinson			Rev B			Update for DE2-115 Board
+--	  10/31/2014	T. Bruns/M. Beccani		Rev C			Modified to produce rows of colors
 --			
 -------------------------------------------------------------------------------
 
 -- Always specify the IEEE library in your design
-
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.all;
 USE ieee.std_logic_unsigned.ALL;
 
 -- Entity declaration
--- 		Defines the interface to the entity
-
 ENTITY VGA_ColorBar IS
 
 
 	PORT
 	(
--- 	Note: It is easier to identify individual ports and change their order
---	or types when their declarations are on separate lines.
---	This also helps the readability of your code.
-
     -- Clocks
     
     CLOCK_50	: IN STD_LOGIC;  -- 50 MHz
  
     -- Buttons 
     
-    KEY 		: IN STD_LOGIC_VECTOR (3 downto 0);         -- Push buttons
+    KEY 		: IN STD_LOGIC_VECTOR (3 downto 0); -- Push buttons
 
     -- Input switches
     
-    SW 			: IN STD_LOGIC_VECTOR (17 downto 0);         -- DPDT switches
+    SW 			: IN STD_LOGIC_VECTOR (17 downto 0); -- DPDT switches
 
     -- VGA output
     
@@ -63,7 +55,7 @@ ENTITY VGA_ColorBar IS
     VGA_VS 		 : out std_logic;            -- V_SYNC
     VGA_R 		 : out unsigned(7 downto 0); -- Red[9:0]
     VGA_G 		 : out unsigned(7 downto 0); -- Green[9:0]
-    VGA_B 		 : out unsigned(7 downto 0) -- Blue[9:0]
+    VGA_B 		 : out unsigned(7 downto 0)  -- Blue[9:0]
 
 
 
@@ -72,7 +64,6 @@ END VGA_ColorBar;
 
 
 -- Architecture body 
--- 		Describes the functionality or internal implementation of the entity
 
 ARCHITECTURE structural OF VGA_ColorBar IS
 
@@ -86,13 +77,13 @@ COMPONENT VGA_SYNC_module
 END COMPONENT;
 
 
-SIGNAL red_int : STD_LOGIC;
-SIGNAL green_int : STD_LOGIC;
-SIGNAL blue_int : STD_LOGIC;
-SIGNAL video_on_int : STD_LOGIC; 
-SIGNAL pixel_clock_int : STD_LOGIC;
-SIGNAL pixel_row_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
-SIGNAL pixel_column_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL red_int				: STD_LOGIC;
+SIGNAL green_int	  		: STD_LOGIC;
+SIGNAL blue_int     		: STD_LOGIC;
+SIGNAL video_on_int		: STD_LOGIC; 
+SIGNAL pixel_clock_int	: STD_LOGIC;
+SIGNAL pixel_row_int 	: STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL pixel_column_int : STD_LOGIC_VECTOR(9 DOWNTO 0); 
 
 
 BEGIN
@@ -100,8 +91,6 @@ BEGIN
 	VGA_R(6 DOWNTO 0) <= "0000000";
 	VGA_G(6 DOWNTO 0) <= "0000000";
 	VGA_B(6 DOWNTO 0) <= "0000000";
-
-
 
 	U1: VGA_SYNC_module PORT MAP
 		(clock_50Mhz		=>	CLOCK_50,

@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 --
--- Project					: VGA_Ball
--- File name				: VGA_Ball.vhd
--- Title						: VGA Moving Ball 
+-- Project					: VGA_ColorBar
+-- File name				: VGA_ColorBar.vhd
+-- Title						: VGA display test colors
 -- Description				:  
 --								: 
 -- Design library			: N/A
--- Analysis Dependency	: VGA_SYNC.vhd, VGA_SYNC.vhd, Ball.vhd
+-- Analysis Dependency	: VGA_SYNC.vhd
 -- Simulator(s)			: ModelSim-Altera version 6.1g
 -- Initialization			: none
 -- Notes						: This model is designed for synthesis
@@ -15,12 +15,15 @@
 -------------------------------------------------------------------------------
 --
 -- Revisions
---			Date				Author			Revision		Comments
---		3/11/2008		W.H.Robinson		Rev A			Creation
---		3/13/2012		W.H.Robinson		Rev B			Update for DE2-115 Board
---	  10/31/2014	T.Bruns/M.Beccani		Rev C			Added ability to move in both X and Y
+--			Date		Author			Revision		Comments
+--		3/11/2008		W.H.Robinson	Rev A			Creation
+--		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
+--
 --			
 -------------------------------------------------------------------------------
+
+-- Always specify the IEEE library in your design
+
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -28,22 +31,28 @@ USE ieee.numeric_std.all;
 USE ieee.std_logic_unsigned.ALL;
 
 -- Entity declaration
-ENTITY VGA_Ball IS
+-- 		Defines the interface to the entity
+
+ENTITY VGA_ColorBar IS
 
 
 	PORT
 	(
+-- 	Note: It is easier to identify individual ports and change their order
+--	or types when their declarations are on separate lines.
+--	This also helps the readability of your code.
+
     -- Clocks
     
     CLOCK_50	: IN STD_LOGIC;  -- 50 MHz
  
     -- Buttons 
     
-    KEY 		: IN STD_LOGIC_VECTOR (3 downto 0); -- Push buttons
+    KEY 		: IN STD_LOGIC_VECTOR (3 downto 0);         -- Push buttons
 
     -- Input switches
     
-    SW 			: IN STD_LOGIC_VECTOR (17 downto 0); -- DPDT switches
+    SW 			: IN STD_LOGIC_VECTOR (17 downto 0);         -- DPDT switches
 
     -- VGA output
     
@@ -54,14 +63,18 @@ ENTITY VGA_Ball IS
     VGA_VS 		 : out std_logic;            -- V_SYNC
     VGA_R 		 : out unsigned(7 downto 0); -- Red[9:0]
     VGA_G 		 : out unsigned(7 downto 0); -- Green[9:0]
-    VGA_B 		 : out unsigned(7 downto 0)  -- Blue[9:0]
+    VGA_B 		 : out unsigned(7 downto 0) -- Blue[9:0]
+
+
 
 	);
-END VGA_Ball;
+END VGA_ColorBar;
 
 
 -- Architecture body 
-ARCHITECTURE structural OF VGA_Ball IS
+-- 		Describes the functionality or internal implementation of the entity
+
+ARCHITECTURE structural OF VGA_ColorBar IS
 
 COMPONENT VGA_SYNC_module
 
@@ -72,24 +85,14 @@ COMPONENT VGA_SYNC_module
 
 END COMPONENT;
 
-COMPONENT ball
 
-   PORT(pixel_row, pixel_column	: IN  std_logic_vector(9 DOWNTO 0);
-        Red,Green,Blue 				: OUT std_logic;
-		  Horiz_sync : IN std_logic;
-        Vert_sync	 : IN std_logic);
-END COMPONENT;
-
-
-SIGNAL red_int 			: STD_LOGIC;
-SIGNAL green_int 			: STD_LOGIC;
-SIGNAL blue_int 			: STD_LOGIC;
-SIGNAL video_on_int 		: STD_LOGIC;
-SIGNAL vert_sync_int 	: STD_LOGIC;
-SIGNAL horiz_sync_int 	: STD_LOGIC; 
-SIGNAL pixel_clock_int 	: STD_LOGIC;
-SIGNAL pixel_row_int 	: STD_LOGIC_VECTOR(9 DOWNTO 0); 
-SIGNAL pixel_column_int : STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL red_int : STD_LOGIC;
+SIGNAL green_int : STD_LOGIC;
+SIGNAL blue_int : STD_LOGIC;
+SIGNAL video_on_int : STD_LOGIC; 
+SIGNAL pixel_clock_int : STD_LOGIC;
+SIGNAL pixel_row_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL pixel_column_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
 
 
 BEGIN
@@ -98,36 +101,23 @@ BEGIN
 	VGA_G(6 DOWNTO 0) <= "0000000";
 	VGA_B(6 DOWNTO 0) <= "0000000";
 
-	VGA_HS <= horiz_sync_int;
-	VGA_VS <= vert_sync_int;
 
 
 	U1: VGA_SYNC_module PORT MAP
 		(clock_50Mhz		=>	CLOCK_50,
-		 red					=>	red_int,
-		 green				=>	green_int,	
-		 blue					=>	blue_int,
+		 red					=>	pixel_row_int(7),
+		 green				=>	pixel_row_int(6),	
+		 blue					=>	pixel_row_int(5),
 		 red_out				=>	VGA_R(7),
 		 green_out			=>	VGA_G(7),
 		 blue_out			=>	VGA_B(7),
-		 horiz_sync_out	=>	horiz_sync_int,
-		 vert_sync_out		=>	vert_sync_int,
+		 horiz_sync_out	=>	VGA_HS,
+		 vert_sync_out		=>	VGA_VS,
 		 video_on			=>	VGA_BLANK_N,
 		 pixel_clock		=>	VGA_CLK,
 		 pixel_row			=>	pixel_row_int,
 		 pixel_column		=>	pixel_column_int
 		);
-
-	U2: ball PORT MAP
-		(pixel_row		=> pixel_row_int,
-		 pixel_column	=> pixel_column_int,
-		 Red				=> red_int,
-		 Green			=> green_int,
-		 Blue				=> blue_int,
-		 Vert_sync		=> vert_sync_int,
-		 Horiz_sync 	=> horiz_sync_int
-		);
-		
 
 END structural;
 

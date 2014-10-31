@@ -15,10 +15,10 @@
 -------------------------------------------------------------------------------
 --
 -- Revisions
---			Date		Author			Revision		Comments
---		3/11/2008		W.H.Robinson	Rev A			Creation
---		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
---
+--			Date				Author			Revision		Comments
+--		3/11/2008		W.H.Robinson		Rev A			Creation
+--		3/13/2012		W.H.Robinson		Rev B			Update for DE2-115 Board
+--	  10/31/2014	T.Bruns/M.Beccani		Rev C			Added user control for ball movement
 --			
 -------------------------------------------------------------------------------
 

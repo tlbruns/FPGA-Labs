@@ -41,18 +41,27 @@ end top_level;
 
 architecture Behavioral of top_level is
 
-	COMPONENT VGA
-	PORT(
-		CLK25 : IN std_logic;    
-      rez_160x120 : IN std_logic;
-      rez_320x240 : IN std_logic;
-		Hsync : OUT std_logic;
-		Vsync : OUT std_logic;
-		Nblank : OUT std_logic;      
-		clkout : OUT std_logic;
-		activeArea : OUT std_logic;
-		Nsync : OUT std_logic
-		);
+--	COMPONENT VGA
+--	PORT(
+--		CLK25 : IN std_logic;    
+--      rez_160x120 : IN std_logic;
+--      rez_320x240 : IN std_logic;
+--		Hsync : OUT std_logic;
+--		Vsync : OUT std_logic;
+--		Nblank : OUT std_logic;      
+--		clkout : OUT std_logic;
+--		activeArea : OUT std_logic;
+--		Nsync : OUT std_logic
+--		);
+--	END COMPONENT;
+	
+	COMPONENT VGA_SYNC_module
+
+	PORT(	clock_50Mhz, red, green, blue		: IN	STD_LOGIC;
+			red_out, green_out, blue_out, horiz_sync_out, 
+			vert_sync_out, video_on, pixel_clock	: OUT	STD_LOGIC;
+			pixel_row, pixel_column: OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
+
 	END COMPONENT;
 
 	COMPONENT ov7670_controller
