@@ -1,3 +1,20 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: LCD Marquee 
+-- File name				: LCD_marquee.vhd
+-- Title				    	: LCD Marquee
+-- Description				: Scrolling marquee on the DE2-115 Board LCD
+
+-- Design library			: N/A
+-- Analysis Dependency	: lcd_controller.vhd, counter_1Hz.vhd
+-- Simulator(s)			: ModelSim-Altera version 10.1d
+-- Initialization	    	: none
+-- Notes			
+-------------------------------------------------------------------------------
+-- Revisions
+--			Date				Author				Revision		Comments
+--     10/8/2012	M. Beccani T. Bruns		Rev A			None
+-------------------------------------------------------------------------------
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -15,22 +32,22 @@ ENTITY lcd_marquee IS
     LCD_EN   : out std_logic;      							-- Enable
     LCD_ON   : out std_logic;      							-- Power ON/OFF
     LCD_RS   : out std_logic;	   							-- Command/Data Select, 0 = Command, 1 = Data
-    LCD_RW   : out std_logic; 	   						-- Read/Write Select, 0 = Write, 1 = Read
-    LCD_DATA : inout std_logic_vector(7 downto 0) 	      -- Data bus 8 bits
+    LCD_RW   : out std_logic; 	   						-- Read/Write Select,   0 = Write,   1 = Read
+    LCD_DATA : inout std_logic_vector(7 downto 0)     -- Data bus 8 bits
 	);
 	
 END lcd_marquee;
 
 ARCHITECTURE behavior OF lcd_marquee IS
-  SIGNAL   lcd_enable : STD_LOGIC;
-  SIGNAL   lcd_bus    : STD_LOGIC_VECTOR(9 DOWNTO 0);
-  SIGNAL   lcd_busy   : STD_LOGIC;
-  TYPE lcd_line IS ARRAY (0 to 15)   OF  STD_LOGIC_VECTOR(7 DOWNTO 0); 
-  CONSTANT lcd_line1 : lcd_line := (X"45",X"45",X"43",X"45",X"20",X"32",X"37",X"37",X"20",X"20",X"20",X"20",X"20",X"20",X"20",X"20");
-  CONSTANT lcd_line2 : lcd_line := (X"46",X"50",X"47",X"41",X"20",X"44",X"65",X"73",X"69",X"67",X"6e",X"20",X"20",X"20",X"20",X"20");
-  CONSTANT  goto_line1 : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"90");   
-  CONSTANT  goto_line2 : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"D0");
-  SIGNAL Q1 : STD_LOGIC; 
+  SIGNAL   lcd_enable  : STD_LOGIC;
+  SIGNAL   lcd_bus     : STD_LOGIC_VECTOR(9 DOWNTO 0);
+  SIGNAL   lcd_busy    : STD_LOGIC;
+  TYPE 	  lcd_line IS ARRAY (0 to 15) OF STD_LOGIC_VECTOR(7 DOWNTO 0); 
+  CONSTANT lcd_line1   : lcd_line := (X"45",X"45",X"43",X"45",X"20",X"32",X"37",X"37",X"20",X"20",X"20",X"20",X"20",X"20",X"20",X"20");
+  CONSTANT lcd_line2   : lcd_line := (X"46",X"50",X"47",X"41",X"20",X"44",X"65",X"73",X"69",X"67",X"6e",X"20",X"20",X"20",X"20",X"20");
+  CONSTANT goto_line1  : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"90");   
+  CONSTANT goto_line2  : STD_LOGIC_VECTOR(9 DOWNTO 0) := ("00" & X"D0");
+  SIGNAL   Q1 : STD_LOGIC; 
   
   
   COMPONENT lcd_controller IS

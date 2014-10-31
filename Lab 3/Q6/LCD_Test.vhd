@@ -6,7 +6,7 @@
 -- Description				:  
 --								: 
 -- Design library			: N/A
--- Analysis Dependency	: LCD_Display
+-- Analysis Dependency	: LCD_Display.vhd
 -- Simulator(s)			: ModelSim-Altera version 6.1g
 -- Initialization			: none
 -- Notes						: This model is designed for synthesis
@@ -15,49 +15,40 @@
 -------------------------------------------------------------------------------
 --
 -- Revisions
---			Date		Author			Revision		Comments
---		3/11/2008		W.H.Robinson	Rev A			Creation
---		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
---
+--			Date				Author			Revision		Comments
+--		3/11/2008		W.H.Robinson		Rev A			Creation
+--		3/13/2012		W.H.Robinson		Rev B			Update for DE2-115 Board
+--	  10/31/2014	T.Bruns/M.Beccani		Rev C			Displays 4 selectable hex values instead of 2
 --			
 -------------------------------------------------------------------------------
-
--- Always specify the IEEE library in your design
-
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
 
 -- Entity declaration
--- 		Defines the interface to the entity
-
 ENTITY LCD_Test IS
 
 
 	PORT
 	(
--- 	Note: It is easier to identify individual ports and change their order
---	or types when their declarations are on separate lines.
---	This also helps the readability of your code.
-
     -- Clocks
     
-    CLOCK_50	: IN STD_LOGIC;  -- 50 MHz
+    CLOCK_50 : IN STD_LOGIC;  -- 50 MHz
  
 
     -- Input switches
     
-    SW 			: IN STD_LOGIC_VECTOR (17 downto 0);         -- DPDT switches
+    SW 		 : IN STD_LOGIC_VECTOR (17 downto 0);   -- DPDT switches
 
 
     -- 16 X 2 LCD Module
     
-    LCD_BLON : out std_logic;      							-- Back Light ON/OFF
-    LCD_EN   : out std_logic;      							-- Enable
-    LCD_ON   : out std_logic;      							-- Power ON/OFF
-    LCD_RS   : out std_logic;	   							-- Command/Data Select, 0 = Command, 1 = Data
-    LCD_RW   : out std_logic; 	   						-- Read/Write Select, 0 = Write, 1 = Read
+    LCD_BLON : out std_logic; 	-- Back Light ON/OFF
+    LCD_EN   : out std_logic; 	-- Enable
+    LCD_ON   : out std_logic; 	-- Power ON/OFF
+    LCD_RS   : out std_logic;		-- Command/Data Select, 0 = Command, 1 = Data
+    LCD_RW   : out std_logic; 	-- Read/Write Select,   0 = Write,   1 = Read
     LCD_DATA : inout std_logic_vector(7 downto 0) 	-- Data bus 8 bits
 
 	);
@@ -65,21 +56,19 @@ END LCD_Test;
 
 
 -- Architecture body 
--- 		Describes the functionality or internal implementation of the entity
-
 ARCHITECTURE structural OF LCD_Test IS
 
 COMPONENT LCD_Display
 
 	GENERIC(Num_Hex_Digits: Integer:= 4);
 	
-	PORT(reset					: IN	STD_LOGIC;
-	     clk_50MHz				: IN	STD_LOGIC;
+	PORT(reset					: IN	  STD_LOGIC;
+	     clk_50MHz				: IN	  STD_LOGIC;
 		  Hex_Display_Data	: IN    STD_LOGIC_VECTOR((Num_Hex_Digits*4)-1 DOWNTO 0);
-		  LCD_RS					: OUT	STD_LOGIC;
-		  LCD_E					: OUT	STD_LOGIC;
+		  LCD_RS					: OUT	  STD_LOGIC;
+		  LCD_E					: OUT	  STD_LOGIC;
 		  LCD_RW					: OUT   STD_LOGIC;
-		  DATA_BUS				: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0)
+		  DATA_BUS				: INOUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 		 );
 
 END COMPONENT;
