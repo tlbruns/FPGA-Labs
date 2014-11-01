@@ -1,25 +1,16 @@
--------------------------------------------------------------------------------
---
--- Project					: VGA_Test
+-- Project name				: PROBLEM 8
 -- File name				: VGA_Test.vhd
--- Title						: VGA display test 
--- Description				:  
---								: 
+-- Title					: PROBLEM 8
+-- Description				: Output circle on the screen KEY0 controls background color KEY1 the circle color
 -- Design library			: N/A
--- Analysis Dependency	: VGA_SYNC.vhd
--- Simulator(s)			: ModelSim-Altera version 6.1g
--- Initialization			: none
--- Notes						: This model is designed for synthesis
---								: Compile with VHDL'93
---
+-- Analysis Dependency		: ALL VGA FILEs to handle the VGA outputs 
+-- Initialization			: N/A
+-- Simulator(s)				: ModelSim-Altera Starter Edition version 10.1d
 -------------------------------------------------------------------------------
---
 -- Revisions
---			Date		Author			Revision		Comments
---		3/11/2008		W.H.Robinson	Rev A			Creation
---		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
+--		Date			Author				 Revision		Comments
+--		11/8/2014		T. Bruns & M. Beccani			Rev A			-
 --
---			
 -------------------------------------------------------------------------------
 
 -- Always specify the IEEE library in your design
@@ -92,16 +83,16 @@ COMPONENT debounce
   );
 END COMPONENT; 
 
-SIGNAL red_int : STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-SIGNAL green_int : STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-SIGNAL blue_int : STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-SIGNAL video_on_int : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL pixel_clock_int : STD_LOGIC;
-SIGNAL pixel_row_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
+SIGNAL red_int 			: STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
+SIGNAL green_int 		: STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
+SIGNAL blue_int 		: STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
+SIGNAL video_on_int 	: STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pixel_clock_int 	: STD_LOGIC;
+SIGNAL pixel_row_int 	:STD_LOGIC_VECTOR(9 DOWNTO 0); 
 SIGNAL pixel_column_int :STD_LOGIC_VECTOR(9 DOWNTO 0); 
-SIGNAL color_selector : STD_LOGIC_VECTOR (2 DOWNTO 0);
-SIGNAL color_value : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL key_db0,key_db1 : STD_LOGIC;
+SIGNAL color_selector 	: STD_LOGIC_VECTOR (2 DOWNTO 0);
+SIGNAL color_value 		: STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL key_db0,key_db1 	: STD_LOGIC;
 
 TYPE rgb is array (0 to 2) of STD_LOGIC_VECTOR(7 DOWNTO 0); 
 TYPE colors IS ARRAY (0 to 7) of rgb;
@@ -111,20 +102,7 @@ SIGNAL colors_array: colors;
 SIGNAL background_color : integer RANGE 0 TO 7;
 SIGNAL circle_color : integer RANGE 0 TO 7;
 SIGNAL loop_count : STD_LOGIC_VECTOR(2 DOWNTO 0) := "000"; 
-
 signal radius : integer RANGE 0 TO 1600000 := 70;
-
-
---TYPE screen_structure IS
- -- RECORD
-   --  circle_color : rgb_array;
-   --  background_color: rgb_array;
- -- END RECORD;
-
--- TYPE vector_screen IS ARRAY(7 downto 0) of screen_structure;
-
--- SIGNAL screen: vector_screen;
-
 
 BEGIN
 
@@ -161,71 +139,9 @@ db1: debounce PORT MAP
       DBx => key_db1
 		);
 
-	--VGA_R(7 DOWNTO 0) <= red_int; --  "0000000";
-	--VGA_G(7 DOWNTO 0) <= green_int; -- "0000000";
-	--VGA_B(7 DOWNTO 0) <= blue_int; -- "0000000";
-	
-	-- color_selector <= SW(17 DOWNTO 15); 
-	-- color_value <= SW(7 DOWNTO 0); 
-	
-
---PROCESS(color_selector,color_value)  
---BEGIN
---CASE color_selector IS
---
---WHEN "000" => red_int <= "00000000";  green_int <= "00000000"; blue_int  <= "00000000";
---WHEN "001" => red_int <= "00000000"; green_int <= "00000000"; blue_int  <= color_value;
---WHEN "010" => red_int <= "00000000"; green_int <= color_value; blue_int  <= "00000000";
---WHEN "100" => red_int <= color_value; green_int <= "00000000"; blue_int  <= "00000000";
---WHEN "011" => red_int <= "00000000"; green_int <= color_value; blue_int  <= color_value;
---WHEN "101" => red_int <= color_value; green_int <= "00000000"; blue_int  <= color_value;
---WHEN "110" => red_int <= color_value; green_int <= color_value; blue_int  <= "00000000";
---WHEN "111" => red_int <= color_value; green_int <= color_value; blue_int  <= color_value;
---
---
---END CASE;
---END PROCESS;
---END structural;
-
---generate_colors : process(SW(0))
---begin
---FOR i in 0 to 7 LOOP
---		-- red
---		IF loop_count(2) = '1' THEN
---			rgb_array(0) <= (others => '1');
---			LEDR(0) <= '0'; 
---		ELSE
---			rgb_array(0) <= (others => '0');
---			LEDR(0) <= '1'; 
---		END IF;
---		
---		-- green
---		IF loop_count(1) = '1' THEN
---			rgb_array(1) <= (others => '1');
---			LEDG(0) <= '1'; 
---		ELSE
---			rgb_array(1) <= (others => '0');
---			LEDG(0) <= '0'; 	
---		END IF;
---		
---		-- blue
---		IF loop_count(0) = '1' THEN
---			rgb_array(2) <= (others => '1');
---		ELSE
---			rgb_array(2) <= (others => '0');
---		END IF;
---		
---		colors_array(i) <= rgb_array;
---		loop_count <= loop_count + 1;
---
---END LOOP;
---end process;
-
---video_on_int(0) <= video_on(0);
 
 frame:process(CLOCK_50)
 begin
-	--VGA_R<="00000000";VGA_G<="00000000";VGA_B<="00000000";
 	
 	if pixel_row_int>159 and pixel_row_int <320 and pixel_column_int < 440  and pixel_column_int > 199  then 
 		CASE background_color IS 
@@ -239,10 +155,6 @@ begin
 		WHEN 7  =>  red_int <= (others => '1'); green_int <= (others => '1');  blue_int <= (others => '1'); 
 		END CASE; 
 		
-	 -- red_int <= colors_array(background_color)(0); 
-	 -- green_int <= colors_array(background_color)(1);  
-	 -- blue_int <= colors_array(background_color)(2);   
-	  
 	if  (480*unsigned(pixel_row_int)-unsigned(pixel_row_int)*unsigned(pixel_row_int)+640*unsigned(pixel_column_int)-unsigned(pixel_column_int)*unsigned(pixel_column_int))> 160000 - radius*radius   then
 		CASE circle_color IS 
 		WHEN 0  =>  red_int <= (others => '0'); green_int <= (others => '0');  blue_int <= (others => '0'); 
@@ -256,10 +168,7 @@ begin
 		END CASE; 
 	end if;
 end if;
-	 -- red_int <= colors_array(circle_color)(0); 
-	 -- green_int <= colors_array(circle_color)(1); 
-	 -- blue_int <= colors_array(circle_color)(2);  
-	 --end if;    
+
  end process;
  
 color_assigment: process(key_db0,key_db1)
@@ -273,7 +182,5 @@ begin
  END IF;
 
 end process;
-
-
 
 end structural;
