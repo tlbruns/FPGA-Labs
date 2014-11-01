@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="VGA_test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|VGA_Test|VGA_SYNC_module:U1|video_PLL:video_PLL_inst|altpll:altpll_component" CBX_FILE_NAME="altpll_dp72.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VGA_Test|lpm_mult:Mult0" CBX_FILE_NAME="mult_eat.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VGA_Test|lpm_mult:Mult1" CBX_FILE_NAME="mult_oct.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
