@@ -2,15 +2,15 @@
 --
 -- Project					: VGA_ColorBar
 -- File name				: VGA_ColorBar.vhd
--- Title						: VGA display test colors
+-- Title					: VGA display test colors
 -- Description				:  
---								: 
+--							: 
 -- Design library			: N/A
--- Analysis Dependency	: VGA_SYNC.vhd
--- Simulator(s)			: ModelSim-Altera version 6.1g
+-- Analysis Dependency		: VGA_SYNC.vhd
+-- Simulator(s)				: ModelSim-Altera version 6.1g
 -- Initialization			: none
--- Notes						: This model is designed for synthesis
---								: Compile with VHDL'93
+-- Notes					: This model is designed for synthesis
+--							: Compile with VHDL'93
 --
 -------------------------------------------------------------------------------
 --

@@ -1,4 +1,23 @@
-			
+-- Project name				: PROBLEM 3
+-- File name				: BALL.vhd
+-- Title					: VGA_BALL control problem
+-- Description				 Controls the ball movements on the screen
+-- Design library			: N/A
+-- Analysis Dependency		: N/A
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes				:  N/A
+-
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		11/1/2014		T. Bruns & M. Beccani		Rev A			-
+--
+-------------------------------------------------------------------------------
+
+
+		
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
@@ -118,8 +137,8 @@ direction_change: process(direction_key)
 	BEGIN
 	CASE direction_key IS
 		WHEN "011" => direction <= 2;	 -- left (key2)
-		WHEN "101" => direction <= 1;  -- stop
-		WHEN "110" => direction <= 0;  -- right
+		WHEN "101" => direction <= 1;  -- stop (key(0)
+		WHEN "110" => direction <= 0;  -- right (key1)
 		WHEN OTHERS => direction <= 3; -- reset state
 	END CASE;
 

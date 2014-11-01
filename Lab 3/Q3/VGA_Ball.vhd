@@ -1,25 +1,31 @@
--------------------------------------------------------------------------------
---
--- Project					: VGA_Ball
+-- Project name				: PROBLEM 3
 -- File name				: VGA_Ball.vhd
--- Title						: VGA Moving Ball 
--- Description				:  
+-- Title					: VGA BALL control problem
+-- Description				Controls the ball on the VGA with three KEYS
+--								: KEY(0) RIGHT
+--								: KEY(1) RIGHT
+--								: KEY(2) LEFT 
 --								: 
 -- Design library			: N/A
--- Analysis Dependency	: VGA_SYNC.vhd
--- Simulator(s)			: ModelSim-Altera version 6.1g
--- Initialization			: none
--- Notes						: This model is designed for synthesis
---								: Compile with VHDL'93
+-- Analysis Dependency	: ALL VGA FILEs to handle the VGA outputs 
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
+-- Notes				: testbench file is Display_7segment_tb.vhd
 --
 -------------------------------------------------------------------------------
 --
 -- Revisions
+<<<<<<< HEAD
 --			Date				Author			Revision		Comments
 --		3/11/2008		W.H.Robinson		Rev A			Creation
 --		3/13/2012		W.H.Robinson		Rev B			Update for DE2-115 Board
 --	  10/31/2014	T.Bruns/M.Beccani		Rev C			Added user control for ball movement
 --			
+=======
+--		Date					Author				 Revision		Comments
+--		11/1/2014		T. Bruns & M. Beccani		Rev A			-
+--
+>>>>>>> This is a mess
 -------------------------------------------------------------------------------
 
 -- Always specify the IEEE library in your design
