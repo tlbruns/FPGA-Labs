@@ -1,7 +1,7 @@
 -- Project name				: PROBLEM 3
 -- File name				: BALL.vhd
 -- Title					: VGA_BALL control problem
--- Description				 Controls the ball movements on the screen
+-- Description				 Controls the ball movements on the screen x and y motion of the ball
 -- Design library			: N/A
 -- Analysis Dependency		: N/A
 -- Initialization			: N/A

@@ -1,25 +1,17 @@
--------------------------------------------------------------------------------
---
--- Project					: VGA_ColorBar
+-- Project name				: PROBLEM 4
 -- File name				: VGA_ColorBar.vhd
--- Title						: VGA display test colors
--- Description				:  
---								: 
+-- Title					: VGA COLOR BAR DIFFEREN RESOLUTION
+-- Description				Color bar with different resolution adjusting VGA SYNC FILE and PLL
 -- Design library			: N/A
--- Analysis Dependency	: VGA_SYNC.vhd
--- Simulator(s)			: ModelSim-Altera version 6.1g
--- Initialization			: none
--- Notes						: This model is designed for synthesis
---								: Compile with VHDL'93
---
+-- Analysis Dependency	: ALL VGA FILEs to handle the VGA outputs 
+-- Initialization			: N/A
+-- Simulator(s)			: ModelSim-Altera Starter Edition version 10.1d
 -------------------------------------------------------------------------------
 --
 -- Revisions
---			Date		Author			Revision		Comments
---		3/11/2008		W.H.Robinson	Rev A			Creation
---		3/13/2012		W.H.Robinson	Rev B			Update for DE2-115 Board
+--		Date					Author				 Revision		Comments
+--		11/8/2014		T. Bruns & M. Beccani		Rev A			-
 --
---			
 -------------------------------------------------------------------------------
 
 -- Always specify the IEEE library in your design

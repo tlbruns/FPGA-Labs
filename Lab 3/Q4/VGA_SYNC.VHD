@@ -1,3 +1,23 @@
+-- Project name				: PROBLEM 4
+-- File name				: VGA_SYNC.vhd
+-- Title					: VGA COLOR BAR DIFFEREN RESOLUTION
+-- Description				Edits to 1024x768 resolution
+-- Design library			: N/A
+-- Analysis Dependency		: ALL VGA FILEs to handle the VGA outputs 
+-- Initialization			: N/A
+-- Simulator(s)				: ModelSim-Altera Starter Edition version 10.1d
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--		Date					Author				 Revision		Comments
+--		11/8/2014		T. Bruns & M. Beccani		Rev A			-
+--
+-------------------------------------------------------------------------------
+
+-- Always specify the IEEE library in your design
+
+
+
 library IEEE;
 use  IEEE.STD_LOGIC_1164.all;
 use  IEEE.STD_LOGIC_ARITH.all;
