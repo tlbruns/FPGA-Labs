@@ -1,3 +1,28 @@
+-------------------------------------------------------------------------------
+--
+-- Project					: LCD_Display
+-- File name				: LCD_Display.vhd
+-- Title					: LCD display test 
+-- Description				:  
+--								: 
+-- Design library			: N/A
+-- Analysis Dependency	: LCD_Display.vhd
+-- Simulator(s)			: ModelSim-Altera version 6.1g
+-- Initialization			: none
+-- Notes						: This model is designed for synthesis
+--								: Compile with VHDL'93
+--
+-------------------------------------------------------------------------------
+--
+-- Revisions
+--			Date				Author			Revision		Comments
+--		3/11/2008		W.H.Robinson		Rev A			Creation
+--		3/13/2012		W.H.Robinson		Rev B			Update for DE2-115 Board
+--	  10/31/2014	T.Bruns/M.Beccani		Rev C			Displays 4 selectable hex values instead of 2
+--			
+-------------------------------------------------------------------------------
+
+
 LIBRARY IEEE;
 USE  IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
