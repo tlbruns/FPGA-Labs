@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="top_level">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|frame_buffer:Inst_frame_buffer|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6uj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|ov7670_controller:Inst_ov7670_controller|altsyncram:WideOr1_rtl_0" CBX_FILE_NAME="altsyncram_s301.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|vga_pll:Inst_vga_pll|altpll:altpll_component" CBX_FILE_NAME="vga_pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>
