@@ -1,0 +1,108 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do main_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/MARCO/Altera\ Projects/FPGA-Labs/LCD/db {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# vcom -93 -work work {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity main
+# -- Compiling architecture Behavioral of main
+# vcom -93 -work work {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/pll.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll
+# -- Compiling architecture SYN of pll
+# 
+vsim +altera -do main_run_msim_rtl_vhdl.do -l msim_transcript -gui work.main
+# vsim +altera -do main_run_msim_rtl_vhdl.do -l msim_transcript -gui work.main 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.main(behavioral)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiiigl_pll(vital_pll)
+# Loading altera_mf.mf_stingray_mn_cntr(behave)
+# Loading altera_mf.mf_stingray_post_divider(behave)
+# Loading altera_mf.mf_stingray_scale_cntr(behave)
+# ** Warning: (vsim-3479) Time unit 'fs' is less than the simulator resolution (1ps).
+#    Time: 0 ps  Iteration: 0  Instance: /main/pll_clock/altpll_component/CYCLONEIIIGL_ALTPLL/M6 File: C:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/vhdl/src/altera_mf/altera_mf.vhd
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# do main_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+add wave -position end  sim:/main/CLOCK_50
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/MARCO/Altera\ Projects/FPGA-Labs/LCD/db {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# vcom -93 -work work {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/main.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity main
+# -- Compiling architecture Behavioral of main
+# vcom -93 -work work {C:/Users/MARCO/Altera Projects/FPGA-Labs/LCD/pll.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll
+# -- Compiling architecture SYN of pll
+# 
+add wave -position end  sim:/main/GPIO(0)
+add wave -position end  sim:/main/GPIO(1)
+add wave -position end  sim:/main/GPIO(26)
+add wave -position end  sim:/main/GPIO(27)
+add wave -position 1  sim:/main/Hcount
+add wave -position 2  sim:/main/Vcount
+add wave -position 1  sim:/main/PixelClock
+force -freeze sim:/main/CLOCK_50 1 0, 0 {50 ps} -r 100
+run
+force -drive sim:/main/PixelClock 0 0
+run
+force -drive sim:/main/PixelClock 1 0
+run
+force -drive sim:/main/GPIO(27) 0 0
+run
+force -drive sim:/main/GPIO(26) 1 0
+run
