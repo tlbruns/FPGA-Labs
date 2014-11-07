@@ -42,7 +42,7 @@ END COMPONENT;
    constant THD  :   integer := 800; 
 	constant TH   :   integer := 928; 
 	constant THPW :   integer := 48;
-	constant THB  :   integer := 88; 
+	constant THB  :   integer := 0;--88; 
 	constant THFP :  integer := 40;
 	constant TH_THDD : integer := 128;
 	
@@ -50,7 +50,7 @@ END COMPONENT;
 	
 	constant TVD  :   integer := 480; 
 	constant TV   :   integer := 525; 
-	constant TVB  :   integer := 32; 
+	constant TVB  :   integer := 0;--32; 
 	constant TVFP :   integer := 13; 
 	constant TV_TVD  :  integer := 45;
 	
@@ -140,32 +140,27 @@ GPIO(7)  <= '1'; -- ON /OFF
 GPIO(9)  <= PWM_Output; -- PWM
 GPIO(27) <= PixelClock;	-- CLOCK
 --GPIO(26) <= '1' when ( (Hcount > THB) and (Hcount < THB+THD) and (Vcount > TVB) and (Vcount < TVB + TVD) ) else '0'; -- DE
-GPIO(1) <= '0' when ( (Hcount =  TH )  or (Hcount <  1) ) else '1';  -- HSD,
-GPIO(0) <= '0' when ( (Vcount = TV ) or  (Vcount < 3)  ) else '1';  -- VSD
+GPIO(1) <= '0' when  (Hcount =  TH )  else '1';  -- or (Hcount <  1) ) else '1';  -- HSD,
+GPIO(0) <= '0' when  (Vcount = TV )   else '1'; --or  (Vcount < 3)  ) else '1';  -- VSD
 
 
-
-
-
-
-
---GPIO (5 DOWNTO 2 ) <= "1111" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and  (imageDataCurrent(imageDataX) = '1') else -- (conv_std_logic_vector(imageDataX, 5)(0) = '1')
---		 "1111" when (Hcount >= 0) and (Hcount < 266) else 
---		 "0000"; -- RED
---GPIO(35 DOWNTO 32) <= "1111" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and (imageDataCurrent(imageDataX) = '1') else
---		   "1111" when (Hcount >= 266) and (Hcount < 5	) else
---		   "0000";	-- GREEN 
---GPIO(31 DOWNTO 28) <= "1111" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and (imageDataCurrent(imageDataX) = '1') else
---		  "1111" when (Hcount >= 5	) and (Hcount < 800) else
---		  "0000"; -- BLUE
+GPIO (5 DOWNTO 2 ) <= "0000" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and  (imageDataCurrent(imageDataX) = '1') else -- (conv_std_logic_vector(imageDataX, 5)(0) = '1')
+		 "1111" when (Hcount >= 0) and (Hcount < 266) else 
+		 "0000"; -- RED
+GPIO(35 DOWNTO 32) <= "0000" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and (imageDataCurrent(imageDataX) = '1') else
+		   "1111" when (Hcount >= 266) and (Hcount < 522	) else
+		   "0000";	-- GREEN 
+GPIO(31 DOWNTO 28) <= "0000" when (Hcount >= squareLeft) and (Hcount <= (squareLeft+squareWidth)) and (Vcount >= squareTop) and (Vcount <= (squareTop+squareHeight)) and (imageDataCurrent(imageDataX) = '1') else
+		  "1111" when (Hcount >= 522	) and (Hcount < 800) else
+		  "0000"; -- BLUE
 		  
---imageDataCurrent <= imageData(imageDataY);
---imageDataX <= to_integer(unsigned((Hcount-squareLeft)));
---imageDataY <= to_integer(unsigned((Vcount-squareTop)));
+imageDataCurrent <= imageData(imageDataY);
+imageDataX <= to_integer(unsigned((Hcount-squareLeft)));
+imageDataY <= to_integer(unsigned((Vcount-squareTop)));
 
-GPIO(35 DOWNTO 32) <= "0000";
-GPIO(31 DOWNTO 28) <= "0000";
-GPIO(5 DOWNTO 2) <= "1111";
+--GPIO(35 DOWNTO 32) <= "0000";
+--GPIO(31 DOWNTO 28) <= "0000";
+--GPIO(5 DOWNTO 2)   <= "1111";
 
 
 	PixelCounter: process(PixelClock)
@@ -192,77 +187,51 @@ GPIO(5 DOWNTO 2) <= "1111";
 			end if;
 		end if;
 	end process;
-	
-	
-	
---	HSync: process(PixelClock)
---	begin
---		if falling_edge(PixelClock) then
---			if (Hcount <= 1) then
---				GPIO(1) <= '0';
---			else
---				GPIO(1) <= '1';
---			end if;
---		end if;
---	end process;
---	
---	VSync: process(PixelClock)
---	begin
---		if falling_edge(PixelClock) then
---			if (Vcount <= 3) then
---				GPIO(0) <= '0';
---			else
---				GPIO(0) <= '1';
---			end if;
---		end if;
---	end process;
---	
-	
 		
---	SecondGenerator: process(PixelClock)
---	begin
---		if rising_edge(PixelClock) then
---			if (Prescaler <= "11110100001001000") then
---				Prescaler <= Prescaler + 1;
---			else
---				Prescaler <= (others => '0');
---				Tick <= not Tick;
---			end if;
---		end if;
---	end process;
---	
---	Changer: process(Tick)
---	begin
---		if rising_edge(Tick) then
---			if (moveRight = '1') then
---				if (squareLeft < (800-squareWidth)) then
---					squareLeft <= squareLeft + 1;
---				else
---					moveRight <= '0';
---				end if;
---			else
---				if (squareLeft > 0) then
---					squareLeft <= squareLeft - 1;
---				else
---					moveRight <= '1';
---				end if;			
---			end if;
---			
---			if (moveDown = '1') then
---				if (squareTop < (480-squareHeight)) then
---					squareTop <= squareTop + 1;
---				else
---					moveDown <= '0';
---				end if;	
---			else
---				if (squareTop > 0) then
---					squareTop <= squareTop - 1;
---				else
---					moveDown <= '1';
---				end if;				
---			end if;
---		end if;
---	end process;	
+	SecondGenerator: process(PixelClock)
+	begin
+		if rising_edge(PixelClock) then
+			if (Prescaler <= "11110100001001000") then
+				Prescaler <= Prescaler + 1;
+			else
+				Prescaler <= (others => '0');
+				Tick <= not Tick;
+			end if;
+		end if;
+	end process;
+
+	Changer: process(Tick)
+	begin
+		if rising_edge(Tick) then
+			if (moveRight = '1') then
+				if (squareLeft < (800-squareWidth)) then
+					squareLeft <= squareLeft + 1;
+				else
+					moveRight <= '0';
+				end if;
+			else
+				if (squareLeft > 0) then
+					squareLeft <= squareLeft - 1;
+				else
+					moveRight <= '1';
+				end if;			
+			end if;
+			
+			if (moveDown = '1') then
+				if (squareTop < (480-squareHeight)) then
+					squareTop <= squareTop + 1;
+				else
+					moveDown <= '0';
+				end if;	
+			else
+				if (squareTop > 0) then
+					squareTop <= squareTop - 1;
+				else
+					moveDown <= '1';
+				end if;				
+			end if;
+		end if;
+	end process;	
 
 
 end Behavioral;

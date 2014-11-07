@@ -146,7 +146,7 @@ BEGIN
 		clk0_multiply_by => 4,
 		clk0_phase_shift => "0",
 		clk1_divide_by => 100,
-		clk1_duty_cycle => 90,
+		clk1_duty_cycle => 85,
 		clk1_multiply_by => 3,
 		clk1_phase_shift => "0",
 		compensate_clock => "CLK0",
@@ -230,7 +230,7 @@ END SYN;
 -- Retrieval info: PRIVATE: DIV_FACTOR0 NUMERIC "1"
 -- Retrieval info: PRIVATE: DIV_FACTOR1 NUMERIC "1"
 -- Retrieval info: PRIVATE: DUTY_CYCLE0 STRING "50.00000000"
--- Retrieval info: PRIVATE: DUTY_CYCLE1 STRING "90.00000000"
+-- Retrieval info: PRIVATE: DUTY_CYCLE1 STRING "85.00000000"
 -- Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "40.000000"
 -- Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE1 STRING "1.500000"
 -- Retrieval info: PRIVATE: EXPLICIT_SWITCHOVER_COUNTER STRING "0"
@@ -312,7 +312,7 @@ END SYN;
 -- Retrieval info: CONSTANT: CLK0_MULTIPLY_BY NUMERIC "4"
 -- Retrieval info: CONSTANT: CLK0_PHASE_SHIFT STRING "0"
 -- Retrieval info: CONSTANT: CLK1_DIVIDE_BY NUMERIC "100"
--- Retrieval info: CONSTANT: CLK1_DUTY_CYCLE NUMERIC "90"
+-- Retrieval info: CONSTANT: CLK1_DUTY_CYCLE NUMERIC "85"
 -- Retrieval info: CONSTANT: CLK1_MULTIPLY_BY NUMERIC "3"
 -- Retrieval info: CONSTANT: CLK1_PHASE_SHIFT STRING "0"
 -- Retrieval info: CONSTANT: COMPENSATE_CLOCK STRING "CLK0"
