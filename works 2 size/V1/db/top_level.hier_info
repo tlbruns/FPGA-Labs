@@ -1,30 +1,30 @@
 |top_level
 CLOCK_50 => vga_pll:inst_vga_pll.inclk0
-GPIO[0] <> <UNC>
-GPIO[1] <> <UNC>
-GPIO[2] <> <UNC>
-GPIO[3] <> <UNC>
-GPIO[4] <> <UNC>
-GPIO[5] <> <UNC>
-GPIO[6] <> <UNC>
-GPIO[7] <> <UNC>
+GPIO[0] <> GPIO[0]
+GPIO[1] <> GPIO[1]
+GPIO[2] <> GPIO[2]
+GPIO[3] <> GPIO[3]
+GPIO[4] <> GPIO[4]
+GPIO[5] <> GPIO[5]
+GPIO[6] <> <GND>
+GPIO[7] <> <VCC>
 GPIO[8] <> <UNC>
-GPIO[9] <> <UNC>
+GPIO[9] <> GPIO[9]
 GPIO[10] <> GPIO[10]
 GPIO[11] <> GPIO[11]
 GPIO[21] <> GPIO[21]
 GPIO[24] <> GPIO[24]
 GPIO[25] <> ov7670_controller:Inst_ov7670_controller.siod
-GPIO[26] <> <UNC>
-GPIO[27] <> <UNC>
-GPIO[28] <> <UNC>
-GPIO[29] <> <UNC>
-GPIO[30] <> <UNC>
-GPIO[31] <> <UNC>
-GPIO[32] <> <UNC>
-GPIO[33] <> <UNC>
-GPIO[34] <> <UNC>
-GPIO[35] <> <UNC>
+GPIO[26] <> GPIO[26]~reg0
+GPIO[27] <> GPIO[27]
+GPIO[28] <> GPIO[28]
+GPIO[29] <> GPIO[29]
+GPIO[30] <> GPIO[30]
+GPIO[31] <> GPIO[31]
+GPIO[32] <> GPIO[32]
+GPIO[33] <> GPIO[33]
+GPIO[34] <> GPIO[34]
+GPIO[35] <> GPIO[35]
 config_finished <= ov7670_controller:Inst_ov7670_controller.config_finished
 VGA_HS <= VGA:Inst_VGA.Hsync
 VGA_VS <= VGA:Inst_VGA.Vsync
@@ -57,6 +57,8 @@ KEY[3] => Address_Generator:Inst_Address_Generator.rez_320x240
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
 c1 <= altpll:altpll_component.clk[1]
+c2 <= altpll:altpll_component.clk[2]
+c3 <= altpll:altpll_component.clk[3]
 
 
 |top_level|vga_pll:inst_vga_pll|altpll:altpll_component
