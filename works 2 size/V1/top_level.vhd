@@ -171,9 +171,9 @@ architecture Behavioral of top_level is
 	COMPONENT frame_buffer
 	PORT(
 		data : IN std_logic_vector(11 downto 0);
-		rdaddress : IN std_logic_vector(18 downto 0);
+		rdaddress : IN std_logic_vector(16 downto 0);
 		rdclock : IN std_logic;
-		wraddress : IN std_logic_vector(18 downto 0);
+		wraddress : IN std_logic_vector(16 downto 0);
 		wrclock : IN std_logic;
 		wren : IN std_logic;          
 		q : OUT std_logic_vector(11 downto 0)
@@ -190,7 +190,7 @@ architecture Behavioral of top_level is
 		vsync : IN std_logic;
 		href : IN std_logic;
 		d : IN std_logic_vector(7 downto 0);          
-		addr : OUT std_logic_vector(18 downto 0);
+		addr : OUT std_logic_vector(16 downto 0);
 		dout : OUT std_logic_vector(11 downto 0);
 		we : OUT std_logic
 		);
@@ -223,7 +223,7 @@ architecture Behavioral of top_level is
       rez_320x240 : IN std_logic;
 		enable      : IN  std_logic;       
       vsync       : in  STD_LOGIC;
-		address     : OUT std_logic_vector(18 downto 0)
+		address     : OUT std_logic_vector(16 downto 0)
 		);
 	END COMPONENT;
 
@@ -236,10 +236,10 @@ architecture Behavioral of top_level is
    signal vSync      : std_logic;
    signal nSync      : std_logic;
    
-   signal wraddress  : std_logic_vector(18 downto 0);
+   signal wraddress  : std_logic_vector(16 downto 0);
    signal wrdata     : std_logic_vector(11 downto 0);
    
-   signal rdaddress  : std_logic_vector(18 downto 0);
+   signal rdaddress  : std_logic_vector(16 downto 0);
    signal rddata     : std_logic_vector(11 downto 0);
    signal red,green,blue : std_logic_vector(7 downto 0);
    signal activeArea : std_logic;
@@ -300,7 +300,7 @@ inst_vga_pll : vga_pll port map(
 		q         => rddata,
       
 		wrclock   => GPIO(20),--ov7670_pclk,
-		wraddress => wraddress(18 downto 0),
+		wraddress => wraddress(16 downto 0),
 		data      => wrdata,
 		wren      => wren
 	);
