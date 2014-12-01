@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'LCD_Display:U1|CLK_400HZ'
+Slack : -3.335
+TNS   : -46.336
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.679
+TNS   : -50.034
+
+Type  : Slow 1200mV 85C Model Setup 'MOUSE:U2|clk_25MHz'
+Slack : -2.293
+TNS   : -183.163
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.225
+TNS   : -0.281
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_Display:U1|CLK_400HZ'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MOUSE:U2|clk_25MHz'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'MOUSE:U2|clk_25MHz'
+Slack : -0.464
+TNS   : -4.894
+
+Type  : Slow 1200mV 85C Model Removal 'MOUSE:U2|clk_25MHz'
+Slack : 0.727
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -31.270
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MOUSE:U2|clk_25MHz'
+Slack : -1.285
+TNS   : -155.485
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_Display:U1|CLK_400HZ'
+Slack : -1.285
+TNS   : -50.115
+
+Type  : Slow 1200mV 0C Model Setup 'LCD_Display:U1|CLK_400HZ'
+Slack : -2.926
+TNS   : -38.905
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.392
+TNS   : -44.289
+
+Type  : Slow 1200mV 0C Model Setup 'MOUSE:U2|clk_25MHz'
+Slack : -2.028
+TNS   : -156.771
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.188
+TNS   : -0.188
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_Display:U1|CLK_400HZ'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MOUSE:U2|clk_25MHz'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'MOUSE:U2|clk_25MHz'
+Slack : -0.322
+TNS   : -2.742
+
+Type  : Slow 1200mV 0C Model Removal 'MOUSE:U2|clk_25MHz'
+Slack : 0.662
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -31.270
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MOUSE:U2|clk_25MHz'
+Slack : -1.285
+TNS   : -155.485
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_Display:U1|CLK_400HZ'
+Slack : -1.285
+TNS   : -50.115
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_Display:U1|CLK_400HZ'
+Slack : -1.139
+TNS   : -9.749
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.786
+TNS   : -12.551
+
+Type  : Fast 1200mV 0C Model Setup 'MOUSE:U2|clk_25MHz'
+Slack : -0.628
+TNS   : -33.995
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.169
+TNS   : -0.322
+
+Type  : Fast 1200mV 0C Model Hold 'LCD_Display:U1|CLK_400HZ'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MOUSE:U2|clk_25MHz'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'MOUSE:U2|clk_25MHz'
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'MOUSE:U2|clk_25MHz'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -31.611
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MOUSE:U2|clk_25MHz'
+Slack : -1.000
+TNS   : -121.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_Display:U1|CLK_400HZ'
+Slack : -1.000
+TNS   : -39.000
+
+------------------------------------------------------------
