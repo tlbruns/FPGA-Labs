@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/MARCO/Altera Projects/FPGA-Labs/FPGA-Labs/works 2 size/V1_1/output_files/") File("top_level.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("D:/Trevor/My Documents/School/EECE 277 (FPGA)/FPGA-Labs/works 2 size/V2_0/output_files/") File("top_level.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

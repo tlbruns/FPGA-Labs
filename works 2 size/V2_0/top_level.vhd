@@ -27,9 +27,10 @@ entity top_level is
 		   vga_b     : out  STD_LOGIC_vector(7 downto 4);
 			
 			-- PS/2 port
-
 			PS2_DAT,                    -- Data
 			PS2_CLK : INOUT STD_LOGIC;  -- Clock
+			
+			LEDG	  : out STD_LOGIC_vector(8 downto 0);
            
 --           ov7670_pclk  : in  STD_LOGIC;
 --           ov7670_xclk  : out STD_LOGIC;
@@ -87,7 +88,7 @@ architecture Behavioral of top_level is
 	signal moveRight: std_logic := '1';
 	signal moveDown: std_logic := '1';
 	
-		type CursorData_t is array(0 to 26) of std_logic_vector(13 downto 0);
+	type CursorData_t is array(0 to 26) of std_logic_vector(13 downto 0);
 	constant CursorData : CursorData_t := (	"10000000000000",
 														"11000000000000",
 														"11100000000000",
@@ -118,7 +119,8 @@ architecture Behavioral of top_level is
 	
 	signal CursorDataX, CursorDataY: integer;
 	signal CursorDataCurrent: std_logic_vector(13 downto 0);
-
+	
+			
 	COMPONENT VGA
 	PORT(
 		CLK25 : IN std_logic;    
@@ -227,16 +229,21 @@ architecture Behavioral of top_level is
 	END COMPONENT;
 	
 	COMPONENT MOUSE
-
    PORT( clk_50MHz, reset 			: IN std_logic;
          mouse_data					: INOUT std_logic;
          mouse_clk 					: INOUT std_logic;
          left_button, right_button	: OUT std_logic;
 			mouse_cursor_row 			: OUT std_logic_vector(9 DOWNTO 0); 
 			mouse_cursor_column 		: OUT std_logic_vector(9 DOWNTO 0)
-		);       
-		
+		);       	
 	END COMPONENT;
+	
+	COMPONENT icon_takephoto
+	PORT( index	:	in	integer range 1 to 2500;
+			pixel	:	out std_logic_vector(11 downto 0)
+			);
+	END COMPONENT icon_takephoto;
+
 
 
    signal clk_camera : std_logic;
@@ -266,6 +273,9 @@ architecture Behavioral of top_level is
 	signal left_button_int  : std_logic;
 	signal right_button_int : std_logic;
 	signal mouse_reset		: std_logic := '1';
+	
+	signal icon_takephoto_index : integer range 0 to 2500 := 1;
+	signal icon_takephoto_pixel : std_logic_vector(11 downto 0) := (others => '0');
 	
 begin
    vga_r <= red(7 downto 4);
@@ -300,7 +310,7 @@ inst_vga_pll : vga_pll port map(
 	Inst_debounce: debounce PORT MAP(
 		clk => clk_vga,
 		i   => KEY(1),
-		o   => resend
+		o   => resend	
 	);
 
 	
@@ -310,8 +320,8 @@ inst_vga_pll : vga_pll port map(
 		o   => picture
 	);
 	
-	Inst_Mouse: MOUSE PORT MAP
-		(clk_50MHz		=> CLOCK_50,
+	Inst_Mouse: MOUSE PORT MAP(
+		 clk_50MHz		=> CLOCK_50,
 		 reset 			=> mouse_reset,
        mouse_data		=> PS2_DAT,
        mouse_clk 		=> PS2_CLK,
@@ -320,11 +330,17 @@ inst_vga_pll : vga_pll port map(
 		 mouse_cursor_row 	=>	cursorTop,
 		 mouse_cursor_column => cursorLeft
 		);
+		
+	Inst_icon_takephoto: icon_takephoto	PORT MAP( 
+		index	=> icon_takephoto_index,
+		pixel	=> icon_takephoto_pixel
+		);
+
 	
 
 	Inst_ov7670_controller: ov7670_controller PORT MAP(
 		clk             => clk_camera,
-		resend          => resend,
+		resend	       => resend,
 		config_finished => config_finished,
 		sioc            => GPIO(24),--ov7670_sioc,
 		siod            => GPIO(25),--ov7670_siod,
@@ -397,6 +413,7 @@ GPIO(1) <= '0' when  (Hcount =  TH )  else '1';  -- or (Hcount <  1) ) else '1';
 GPIO(0) <= '0' when  (Vcount = TV )   else '1'; --or  (Vcount < 3)  ) else '1';  -- VSD
 
 PixelLCD: process(PixelClock)
+	
 	begin
 		if (PixelClock'event and PixelClock = '1') then
 		
@@ -408,10 +425,47 @@ PixelLCD: process(PixelClock)
 				GPIO(35 DOWNTO 32) <=  (others => '1'); 
 				GPIO(31 DOWNTO 28) <=  (others => '1');
 				
-				if  (Hcount < 320 and Vcount < 240) then
+				if  (Hcount < 320 and Vcount < 240) then -- cursor in live image region
 					rdaddress_LCD <= rdaddress_LCD + 1;
 				end if;
 				
+				if  ((Hcount>400) and (Hcount<=450) and (Vcount>50) and (Vcount<=100)) then -- cursor in photo_icon region
+					icon_takephoto_index <= icon_takephoto_index + 1;
+					if (icon_takephoto_index = 2500) then
+						icon_takephoto_index <= 1;
+					end if;
+					
+					
+					if (left_button_int = '1') then
+						LEDG(7) <= '1';
+						LEDG(6) <= '0';
+					else
+						LEDG(7) <= '0';
+						LEDG(6) <= '1';
+					end if;
+					
+					if (right_button_int = '1') then
+						LEDG(1) <= '1';
+						LEDG(0) <= '0';
+					else
+						LEDG(1) <= '0';
+						LEDG(0) <= '1';
+					end if;
+					
+				end if;
+			
+			elsif ( (Hcount>400) and (Hcount<=450) and (Vcount>50) and (Vcount<=100) ) then
+				icon_takephoto_index <= icon_takephoto_index + 1;
+				
+				GPIO (5 DOWNTO 2 ) <=  icon_takephoto_pixel(11 downto 8); -- RED 
+				GPIO(35 DOWNTO 32) <=  icon_takephoto_pixel(7 downto 4); -- GREEN 
+				GPIO(31 DOWNTO 28) <=  icon_takephoto_pixel(3 downto 0); -- BLUE
+				
+				if (icon_takephoto_index = 2500) then
+					icon_takephoto_index <= 1;
+				end if;
+				
+					
 			elsif  (Hcount < 320 and Vcount < 240) then
 				rdaddress_LCD <= rdaddress_LCD + 1;   
 				 
@@ -477,9 +531,9 @@ CursorDataY <= to_integer(unsigned((Vcount-cursorTop)));
 --			else
 --				Prescaler <= (others => '0');
 --				Tick <= not Tick;
---			end if;
---		end if;
---	end process;
+--				 if;
+--			 if;
+--		 process;
 --
 --	Changer: process(Tick)
 --	begin
@@ -489,30 +543,30 @@ CursorDataY <= to_integer(unsigned((Vcount-cursorTop)));
 --					cursorLeft <= cursorLeft + 1;
 --				else
 --					moveRight <= '0';
---				end if;
+--					 if;
 --			else
 --				if (cursorLeft > 0) then
 --					cursorLeft <= cursorLeft - 1;
 --				else
 --					moveRight <= '1';
---				end if;			
---			end if;
+--					 if;			
+--				 if;
 --			
 --			if (moveDown = '1') then
 --				if (cursorTop < (480-cursorHeight)) then
 --					cursorTop <= cursorTop + 1;
 --				else
 --					moveDown <= '0';
---				end if;	
+--					 if;	
 --			else
 --				if (cursorTop > 0) then
 --					cursorTop <= cursorTop - 1;
 --				else
 --					moveDown <= '1';
---				end if;				
---			end if;
---		end if;
---	end process;	
+--					 if;				
+--				 if;
+--			 if;
+--		 process;	
 
 end Behavioral;
 
