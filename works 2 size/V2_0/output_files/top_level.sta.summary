@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -8.142
+TNS   : -95.734
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[20]'
+Slack : -4.644
+TNS   : -2452.756
+
+Type  : Slow 1200mV 85C Model Setup 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -2.971
+TNS   : -222.127
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -0.084
+TNS   : -0.084
+
+Type  : Slow 1200mV 85C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 8.986
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 32.683
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.021
+TNS   : -0.021
+
+Type  : Slow 1200mV 85C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[20]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -0.454
+TNS   : -2.819
+
+Type  : Slow 1200mV 85C Model Removal 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.577
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[20]'
+Slack : -3.210
+TNS   : -1932.198
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -1.285
+TNS   : -150.345
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 4.711
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.710
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 19.708
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -7.163
+TNS   : -83.827
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[20]'
+Slack : -4.202
+TNS   : -2179.392
+
+Type  : Slow 1200mV 0C Model Setup 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -2.662
+TNS   : -192.742
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.010
+TNS   : -0.010
+
+Type  : Slow 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.978
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 33.228
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.046
+TNS   : -0.046
+
+Type  : Slow 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[20]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -0.315
+TNS   : -1.035
+
+Type  : Slow 1200mV 0C Model Removal 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[20]'
+Slack : -3.210
+TNS   : -1883.231
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -1.285
+TNS   : -150.345
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 4.693
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.636
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 19.709
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -3.768
+TNS   : -44.397
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[20]'
+Slack : -1.956
+TNS   : -941.035
+
+Type  : Fast 1200mV 0C Model Setup 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -0.952
+TNS   : -58.659
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 14.889
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 35.872
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.003
+TNS   : -0.003
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[20]'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[20]'
+Slack : -3.000
+TNS   : -1123.159
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MOUSE:Inst_Mouse|clk_25MHz'
+Slack : -1.000
+TNS   : -117.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 4.752
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.285
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 9.753
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst_vga_pll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 19.752
+TNS   : 0.000
+
+------------------------------------------------------------
